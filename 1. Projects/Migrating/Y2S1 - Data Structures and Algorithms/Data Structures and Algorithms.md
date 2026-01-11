@@ -2,7 +2,7 @@
 **Semester:** Y2S1
 
 ---
-# Knowledge Map (Syllabus)
+# Knowledge Map
 
 ## Module 1: Foundations & Linear Structures
 
@@ -12,7 +12,7 @@
 - [[Logarithms]]
 
 ### Session 3: [[Arrays]]
-- [[RAM Memory Layout]]
+- [[Random Access Memory (RAM)]]
 - [[Sequential Search]]
 
 ### Session 4: [[Basic Sorting Algorithms]]

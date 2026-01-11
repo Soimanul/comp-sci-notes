@@ -17,7 +17,6 @@ While there are other notations, Big O is the industry standard for discussing e
 # Common Orders of Growth
 
 Listed from fastest to slowest.
-![[SCR-20260110-bxmg.png]]
 
 | Notation      | Name         | Example                             |
 | ------------- | ------------ | ----------------------------------- |
@@ -28,7 +27,7 @@ Listed from fastest to slowest.
 | $O(n^2)$      | Quadratic    | Nested Loops / [[Bubble Sort]]      |
 | $O(2^n)$      | Exponential  | Recursive Fibonacci                 |
 | $O(n!)$       | Factorial    | Traveling Salesman (Brute Force)    |
-
+![[SCR-20260110-bxmg.png]]
 # Calculation Rules
 
 1. **Drop Constants:** $O(2n)$ becomes $O(n)$.

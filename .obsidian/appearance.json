@@ -4,6 +4,6 @@
   "accentColor": "#9ebdfb",
   "textFontFamily": "Lilex",
   "interfaceFontFamily": "IBM Plex Sans",
-  "theme": "obsidian",
+  "theme": "system",
   "translucency": true
 }

@@ -2,5 +2,6 @@
   "promptDelete": false,
   "showLineNumber": false,
   "newFileLocation": "folder",
-  "showIndentGuide": false
+  "showIndentGuide": false,
+  "alwaysUpdateLinks": true
 }
