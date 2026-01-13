@@ -15,7 +15,7 @@
 - [[Random Access Memory (RAM)]]
 - [[Sequential Search]]
 
-### Session 4: [[Basic Sorting Algorithms]]
+### Session 4: [[Basic Sorting]]
 - [[Insertion Sort]]
 - [[Selection Sort]]
 - [[Bubble Sort]]
