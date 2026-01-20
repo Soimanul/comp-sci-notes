@@ -1,10 +1,9 @@
 **Tags:** #topic #cs #algorithm #sorting **Related:** [[Algorithm Analysis]], [[Arrays]]
 
-# Definition
-
+##  Definition
 Basic sorting algorithms are simple methods to rearrange elements in a specific order (ascending or descending). They generally operate by comparing and swapping elements iteratively.
 
-# Characteristics
+## Characteristics
 
 - **Time Complexity:** Most basic sorts have a quadratic time complexity of $O(n^2)$, making them inefficient for large datasets compared to advanced algorithms like [[Merge Sort]] or [[Quicksort]].
     

@@ -1,0 +1,4 @@
+- [[Multilayer Perceptron]] (MLP)
+- [[Feedforward Neural Network]]
+- [[Backpropagation]] (The Learning Algorithm)
+- [[Epoch]]
