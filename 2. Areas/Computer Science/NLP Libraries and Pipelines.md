@@ -1,0 +1,3 @@
+- [[NLP libraries encode assumptions]]
+- [[Common NLP pipeline stages]]
+- [[Library tradeoffs - control vs robustness]]

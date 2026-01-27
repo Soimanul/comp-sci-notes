@@ -1,4 +1,5 @@
-**Tags:** #concept #ai #history #philosophy **Related:** [[ELIZA]], [[The ELIZA Effect]], [[Artificial Intelligence]]
+**Tags:** #concept #ai #history #philosophy 
+**Related:** [[ELIZA]], [[The ELIZA Effect]], [[Artificial Intelligence]]
 
 # Definition
 

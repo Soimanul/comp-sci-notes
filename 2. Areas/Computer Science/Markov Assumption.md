@@ -1,4 +1,5 @@
-**Tags:** #concept #statistics #nlp **Related:** [[N-gram Model]]
+**Tags:** #concept #statistics #nlp 
+**Related:** [[N-gram Model]]
 
 ## Definition
 A simplifying assumption used in sequence modeling. It states that the probability of a future state depends **only** on the current state (or a limited history), not on the entire history of events.

@@ -1,4 +1,5 @@
-**Tags:** #concept #neural-networks **Related:** [[Perceptron]], [[Multilayer Perceptron]]
+**Tags:** #concept #neural-networks 
+**Related:** [[Perceptron]], [[Multilayer Perceptron]]
 
 ## Definition
 A mathematical function applied to the output of a neuron. It determines whether the neuron should "fire" (activate).

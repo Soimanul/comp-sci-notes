@@ -1,0 +1,3 @@
+- [[Symbolic view of language]]
+- [[Statistical view of language]]
+- [[Cost of explicit structure]]

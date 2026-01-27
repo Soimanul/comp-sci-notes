@@ -1,4 +1,5 @@
-**Tags:** #model #neural-networks #deep-learning **Related:** [[Perceptron]], [[Feedforward Neural Network]]
+**Tags:** #model #neural-networks #deep-learning 
+**Related:** [[Perceptron]], [[Feedforward Neural Network]]
 
 ## Definition
 A neural network consisting of at least three layers of nodes:

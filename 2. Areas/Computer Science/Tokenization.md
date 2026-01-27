@@ -1,4 +1,5 @@
-**Tags:** #concept #nlp #preprocessing **Related:** [[Morphemes]], [[Subwords]], [[N-gram Model]]
+**Tags:** #concept #nlp #preprocessing 
+**Related:** [[Morphemes]], [[Subwords]], [[N-gram Model]]
 
 ## Definition
 The process of breaking a stream of text into smaller, meaningful units called **tokens**. These tokens can be words, characters, or subwords.

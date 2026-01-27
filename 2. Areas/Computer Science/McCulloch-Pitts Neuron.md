@@ -1,4 +1,5 @@
-**Tags:** #concept #neural-networks #history **Related:** [[Perceptron]]
+**Tags:** #concept #neural-networks #history 
+**Related:** [[Perceptron]]
 
 ## Definition
 The earliest mathematical model of a biological neuron (1943). It functions as a binary linear classifier (a logic gate).

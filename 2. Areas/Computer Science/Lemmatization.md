@@ -1,4 +1,5 @@
-**Tags:** #concept #nlp #preprocessing **Related:** [[Stemming]], [[Morphemes]], [[Subwords]]
+**Tags:** #concept #nlp #preprocessing 
+**Related:** [[Stemming]], [[Morphemes]], [[Subwords]]
 
 ## Definition
 The process of reducing a word to its base dictionary form, known as the **Lemma**. Unlike stemming, it considers the context and part of speech.

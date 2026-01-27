@@ -1,4 +1,5 @@
-**Tags:** #algorithm #neural-networks #training **Related:** [[Multilayer Perceptron]], [[Epoch]]
+**Tags:** #algorithm #neural-networks #training 
+**Related:** [[Multilayer Perceptron]], [[Epoch]]
 
 ## Definition
 

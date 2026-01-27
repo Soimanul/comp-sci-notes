@@ -1,4 +1,5 @@
-**Tags:** #concept #neural-networks **Related:** [[Perceptron]]
+**Tags:** #concept #neural-networks 
+**Related:** [[Perceptron]]
 
 ## Definition
 An extra parameter ($b$) added to the weighted sum of inputs in a neuron. It allows the activation function to be shifted to the left or right.

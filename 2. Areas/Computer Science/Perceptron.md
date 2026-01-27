@@ -1,4 +1,5 @@
-**Tags:** #model #neural-networks **Related:** [[McCulloch-Pitts Neuron]], [[Bias (Neural Networks)]], [[Activation Functions]]
+**Tags:** #model #neural-networks 
+**Related:** [[McCulloch-Pitts Neuron]], [[Bias (Neural Networks)]], [[Activation Functions]]
 
 ## Definition
 An algorithm for supervised learning of binary classifiers, developed by Frank Rosenblatt (1958). It improves on the McCulloch-Pitts neuron by introducing **learnable weights**.

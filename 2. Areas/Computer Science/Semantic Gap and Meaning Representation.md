@@ -1,0 +1,3 @@
+- [[Semantic gap]]
+- [[Abstract Meaning Representation - AMR]]
+- [[AMR example - active vs passive equivalence]]

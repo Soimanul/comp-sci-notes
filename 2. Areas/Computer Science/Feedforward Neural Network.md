@@ -1,4 +1,5 @@
-**Tags:** #model #neural-networks #deep-learning **Related:** [[Multilayer Perceptron]], [[Backpropagation]]
+**Tags:** #model #neural-networks #deep-learning 
+**Related:** [[Multilayer Perceptron]], [[Backpropagation]]
 
 ## Definition
 A Feedforward Neural Network (FNN) is the simplest type of artificial neural network wherein connections between the nodes do **not** form a cycle.

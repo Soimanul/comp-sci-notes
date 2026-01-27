@@ -4,30 +4,35 @@
 ---
 # Knowledge Map
 ## Module 1: Foundations of NLP 
+### Session 1: Introduction
 
-### Session 1: [[History of NLP]]
+### Session 2: [[History of NLP]]
 - [[ELIZA]]
 - [[The ELIZA Effect]]
 - [[Turing Test]]
 
-### Session 2: [[NLP Fundamentals]]
+### Session 3: [[NLP Fundamentals]]
 - [[NLP Preprocessing]]
 - [[Statistical Language Models]]
 - [[Neural Foundations]]
 - [[Deep Learning Architectures]]
 
-### Session 3: [[Advanced NLP Concepts]]
- - [[From Symbols to Spaces]]
- - [[Sparse Representations]]
- - [[Distributional Meaning]]
- - [[Geometric View of Meaning]]
- - [[Term Weighting]]
- - [[Latent and Contextual Semantics]]
+### Session 4: [[Advanced NLP Concepts]]
+- [[From Symbols to Spaces]]
+- [[Sparse Representations]]
+- [[Distributional Meaning]]
+- [[Geometric View of Meaning]]
+- [[Term Weighting]]
+- [[Latent and Contextual Semantics]]
 
-### Session 4: 
-- 
+### Session 5: [[Python NLP Modules]]
+- [[Two Ways of Thinking About Language]]
+- [[Formal Language Theory]]
+- [[Semantic Gap and Meaning Representation]]
+- [[NLP Libraries and Pipelines]]
+- [[Python NLP Tooling Landscape]]
 
 ---
-## Module 2: Machine Learning and Text Analysis Technqiues
+## Module 2: Machine Learning and Text Analysis Techniques
 
-### Session 5: 
+### Session 6:

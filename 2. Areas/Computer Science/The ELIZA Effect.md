@@ -1,4 +1,5 @@
-**Tags:** #concept #psychology #hci **Related:** [[ELIZA]], [[Turing Test]]
+**Tags:** #concept #psychology #hci 
+**Related:** [[ELIZA]], [[Turing Test]]
 
 # Definition
 

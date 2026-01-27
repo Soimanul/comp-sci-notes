@@ -1,4 +1,5 @@
-**Tags:** #model #nlp #statistics **Related:** [[Tokenization]], [[Markov Assumption]]
+**Tags:** #model #nlp #statistics 
+**Related:** [[Tokenization]], [[Markov Assumption]]
 
 ## Definition
 A probabilistic language model that predicts the next item in a sequence based on the $(N-1)$ previous items.

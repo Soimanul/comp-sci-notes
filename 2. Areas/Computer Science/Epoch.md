@@ -1,4 +1,5 @@
-**Tags:** #concept #neural-networks #training **Related:** [[Backpropagation]], [[Feedforward Neural Network]]
+**Tags:** #concept #neural-networks #training 
+**Related:** [[Backpropagation]], [[Feedforward Neural Network]]
 
 ## Definition
 In machine learning training, an **Epoch** is defined as one complete pass of the entire training dataset through the learning algorithm.

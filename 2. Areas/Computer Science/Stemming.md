@@ -1,4 +1,5 @@
-**Tags:** #concept #nlp #preprocessing **Related:** [[Lemmatization]], [[Tokenization]]
+**Tags:** #concept #nlp #preprocessing 
+**Related:** [[Lemmatization]], [[Tokenization]]
 
 ## Definition
 A crude heuristic process that chops off the ends of words (suffixes) to reduce them to their base form (stem).

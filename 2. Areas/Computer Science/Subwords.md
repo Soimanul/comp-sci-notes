@@ -1,4 +1,5 @@
-**Tags:** #concept #nlp #preprocessing **Related:** [[Tokenization]], [[Morphemes]]
+**Tags:** #concept #nlp #preprocessing 
+**Related:** [[Tokenization]], [[Morphemes]]
 
 ## Definition
 Subwords are tokenization units that are smaller than a full word but (often) larger than a single character. They are the standard for modern Deep Learning models (like Transformers).
