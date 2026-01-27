@@ -1,0 +1,2 @@
+- [[Vector Space Model (VSM)]]
+- [[What “meaning” means in a vector space]]

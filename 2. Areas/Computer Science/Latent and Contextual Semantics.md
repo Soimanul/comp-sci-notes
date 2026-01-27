@@ -1,0 +1,3 @@
+- [[Latent Semantic Analysis (LSA)]]
+- [[HAL: Contextual Co-occurrence]]
+- [[LSA vs HAL: global vs local structure]]

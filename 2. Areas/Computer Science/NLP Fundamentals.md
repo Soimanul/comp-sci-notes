@@ -1,4 +1,5 @@
-**Tags:** #topic #hub #nlp #fundamentals **Related:** [[History of NLP]], [[Natural Language Processing]]
+**Tags:** #topic #hub #nlp #fundamentals 
+**Related:** [[History of NLP]], [[Natural Language Processing]]
 
 ## Overview
 This hub covers the foundational building blocks of Natural Language Processing. It bridges the gap from raw text manipulation (Preprocessing) to probabilistic sequencing (Statistical Models) and the biological inspiration behind modern AI (Neural Networks).

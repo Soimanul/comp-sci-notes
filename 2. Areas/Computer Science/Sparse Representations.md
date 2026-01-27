@@ -1,0 +1,3 @@
+- [[One-hot Encoding]]
+- [[Bag-of-Words (BoW)]]
+- [[Term–Document Matrix]]
