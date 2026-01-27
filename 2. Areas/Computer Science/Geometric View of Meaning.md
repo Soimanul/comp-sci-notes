@@ -1,3 +1,3 @@
 - [[Cosine Similarity]]
-- [[Jaccard / Dice / Overlap Similarities]]
-- [[Normalization: magnitude vs direction]]
+- [[Set Similarity Coefficients]]
+- [[Normalization - magnitude vs direction]]

@@ -1,4 +1,4 @@
 - [[Term Frequency (TF)]]
 - [[Inverse Document Frequency (IDF)]]
 - [[TF–IDF]]
-- [[Limits of TF–IDF: synonymy and polysemy]]
+- [[Limits of TF–IDF]]
