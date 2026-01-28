@@ -10,3 +10,7 @@ In the linear equation $y = mx + b$, the bias is the **y-intercept**.
 - Without bias, the separating line (decision boundary) must always pass through the origin $(0,0)$.
     
 - Bias allows the neuron to fit data that is not centered at the origin.
+
+## Diagram
+
+![[perceptron_bias_effect.png]]

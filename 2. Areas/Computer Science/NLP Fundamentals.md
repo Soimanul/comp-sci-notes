@@ -9,8 +9,7 @@ This hub covers the foundational building blocks of Natural Language Processing.
 - [[Tokenization]]
 - [[Morphemes]]
 - [[Subwords]]
-- [[Stemming]]
-- [[Lemmatization]]
+- [[Normalization (in NLP)]]
 
 ### 2. [[Statistical Language Models]]
 - [[N-gram Model]]

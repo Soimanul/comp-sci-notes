@@ -1,4 +1,4 @@
 - [[Tokenization]]
-- [[Morphemes vs Subwords]]    
-- [[Stemming]]
-- [[Lemmatization]]
+- [[Morphemes]]
+- [[Subwords]]
+- [[Normalization (in NLP)]]

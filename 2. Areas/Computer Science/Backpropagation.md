@@ -12,3 +12,7 @@ The algorithm used to train neural networks. It efficiently calculates the gradi
 2. **Backward Pass:** Propagate the error backward from the output layer to the input layer.
     
 3. **Update:** Use the **Chain Rule** of calculus to determine how much each weight contributed to the error and adjust it (Gradient Descent).
+
+## Diagram for Multilayer Perceptron with Backprop
+
+![[The-Perceptron-Example-The-first-component-of-the-perceptron-is-the-input-matrix-The.png]]

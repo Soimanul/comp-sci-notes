@@ -6,3 +6,13 @@ A mathematical function applied to the output of a neuron. It determines whether
 
 ## Purpose
 Crucially, non-linear activation functions (like Sigmoid, Tanh, ReLU) introduce **non-linearity** to the network. Without them, a neural network is just a giant linear regression model, incapable of learning complex patterns.
+
+## Types
+- [[Step-Function]]
+- [[Sigmoid]]
+- [[Softmax]]
+- [[ReLU]]
+- [[Tanh]]
+## Diagram
+
+![[DeqKjeD6qNmhUNiDfoPBb3xfafw.avif]]

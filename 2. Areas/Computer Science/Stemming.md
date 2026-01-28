@@ -2,7 +2,9 @@
 **Related:** [[Lemmatization]], [[Tokenization]]
 
 ## Definition
-A crude heuristic process that chops off the ends of words (suffixes) to reduce them to their base form (stem).
+A crude [[Heuristic]] normalization process in NLP that chops off the ends of words (suffixes) to reduce them to their base form (stem).
+
+In language words appear in different inflected or derived forms while expressing related meanings. Stemming reduce this variation by mapping related forms to a common representation.
 
 ## Characteristics
 - **Mechanism:** Uses rule-based string manipulation (e.g., "if word ends in 'ing', remove 'ing'").

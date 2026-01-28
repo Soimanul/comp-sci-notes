@@ -2,10 +2,14 @@
 **Related:** [[Tokenization]], [[Morphemes]]
 
 ## Definition
-Subwords are tokenization units that are smaller than a full word but (often) larger than a single character. They are the standard for modern Deep Learning models (like Transformers).
+Subwords are tokenization units that are smaller than a full word but (often) larger than a single character. 
+
+Instead of relying on full words or linguistically defined morphemes, subword representations segment words into frequently occurring fragments. This allows models to handle rare or unseen words while avoiding the need for explicit linguistic rules.
+
+They are the standard for modern Deep Learning models (like Transformers).
 
 ## [[The OOV Problem]]
-Traditional word-level tokenization struggles with **Out-Of-Vocabulary (OOV)** words. If the model hasn't seen the word "unfriendliness" during training, it doesn't know what to do.
+Traditional word-level tokenization struggles with **Out-Of-Vocabulary (OOV)** words. If the model hasn't seen the word "unfriendliness" during training, it won't know what to do.
 
 ## Subword Solution
 Subword tokenization breaks unknown words into known chunks based on frequency statistics, rather than strict linguistic rules.

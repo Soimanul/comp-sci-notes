@@ -12,5 +12,14 @@ $$y = f(\sum_{i=1}^{n} w_i x_i + b)$$
 - $b$: [[Bias (Neural Networks)]] (Shift).
 - $f$: [[Activation Functions]] (Step function).
 
+## Structure 
+
+![[perceptron_labeled (2).png]]
+
+## Performance on data
+
+![[Pasted image 20260128120653.png]]
+
 ## Significance
 It was the first model that could learn from data by adjusting its weights to minimize error, forming the building block of modern Deep Learning.
+

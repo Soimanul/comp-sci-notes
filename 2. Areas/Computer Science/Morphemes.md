@@ -2,7 +2,9 @@
 **Related:** [[Tokenization]], [[Subwords]], [[Stemming]]
 
 ## Definition
-A morpheme is the smallest meaningful unit in a language. Unlike a word, which can stand alone, a morpheme may or may not stand alone, but it always carries semantic meaning.
+A morpheme is the smallest meaningful unit in a language. Unlike a word, which can stand alone, a morpheme may or may not stand alone, but it always carries semantic meaning. 
+
+Representing text at the morpheme level reduces data sparsity and captures shared structure across related word forms, but it requires linguistic analysis that may be complex or language-specific.
 
 ## Types of Morphemes
 

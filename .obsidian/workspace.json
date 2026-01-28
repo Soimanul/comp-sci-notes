@@ -11,14 +11,12 @@
             "id": "a3dac9b602187373",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "2. Areas/Computer Science/Distributional Meaning.md",
-                "mode": "source",
-                "source": false
+                "file": "6. Images/SCR-20260128-kwns.png"
               },
-              "icon": "lucide-file",
-              "title": "Distributional Meaning"
+              "icon": "lucide-image",
+              "title": "SCR-20260128-kwns"
             }
           }
         ]
@@ -78,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5,
-    "collapsed": true
+    "width": 363.5
   },
   "right": {
     "id": "5526dbe9e1211c42",
@@ -195,53 +192,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a3dac9b602187373",
+  "active": "0845d5bcf1254844",
   "lastOpenFiles": [
-    "2. Areas/Computer Science/Advanced NLP Concepts.md",
+    "6. Images/Pasted image 20260128120653.png",
+    "6. Images/Pasted image 20260128120613.png",
+    "6. Images/Pasted image 20260128120338.png",
     "2. Areas/Computer Science/Vector Space Model (VSM).md",
+    "backpropagation_in_neural_network_8.webp",
+    "2. Areas/Computer Science/Advanced NLP Concepts.md",
     "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
     "2. Areas/Computer Science/NLP Fundamentals.md",
-    "2. Areas/Computer Science/Backpropagation.md",
+    "2. Areas/Computer Science/Epoch.md",
     "2. Areas/Computer Science/Feedforward Neural Network.md",
     "2. Areas/Computer Science/Multilayer Perceptron.md",
-    "2. Areas/Computer Science/Activation Functions.md",
-    "2. Areas/Computer Science/Bias (Neural Networks).md",
+    "6. Images/Pasted image 20260128120945.png",
     "2. Areas/Computer Science/Perceptron.md",
+    "6. Images/SCR-20260128-kwns.png",
+    "2. Areas/Computer Science/Normalization (in NLP).md",
+    "2. Areas/Computer Science/Bias (Neural Networks).md",
+    "2. Areas/Computer Science/Activation Functions.md",
+    "6. Images/DeqKjeD6qNmhUNiDfoPBb3xfafw.avif",
+    "6. Images/mcp_neuron_simple.png",
+    "6. Images/perceptron_bias_effect.png",
+    "6. Images/perceptron_labeled (2).png",
     "2. Areas/Computer Science/McCulloch-Pitts Neuron.md",
-    "2. Areas/Computer Science/Markov Assumption.md",
+    "2. Areas/Computer Science/Backpropagation.md",
+    "2. Areas/Computer Science/NLP Preprocessing.md",
+    "2. Areas/Computer Science/Statistical Language Models.md",
     "2. Areas/Computer Science/N-gram Model.md",
+    "2. Areas/Computer Science/Markov Assumption.md",
+    "2. Areas/Computer Science/Heuristic.md",
+    "2. Areas/Computer Science/Greedy Algorithms.md",
     "2. Areas/Computer Science/Lemmatization.md",
     "2. Areas/Computer Science/Stemming.md",
     "2. Areas/Computer Science/Subwords.md",
-    "2. Areas/Computer Science/The OOV Problem.md",
     "2. Areas/Computer Science/Morphemes.md",
     "2. Areas/Computer Science/Tokenization.md",
-    "2. Areas/Computer Science/NLP Preprocessing.md",
-    "2. Areas/Computer Science/From Symbols to Spaces.md",
-    "2. Areas/Computer Science/Sparse Representations.md",
     "2. Areas/Computer Science/Distributional Meaning.md",
-    "2. Areas/Computer Science/Geometric View of Meaning.md",
-    "2. Areas/Computer Science/Term Weighting.md",
-    "2. Areas/Computer Science/Latent and Contextual Semantics.md",
     "Untitled.canvas",
     "Jaccard / Dice ",
     "Jaccard ",
     "2. Areas/Untitled",
-    "2. Areas/Computer Science/Pasted image 20260116111433.png",
     "2. Areas/Computer Science/Algorithms",
     "4. Archive",
     "2. Areas/Computer Science/Software & Systems",
     "2. Areas/Computer Science/Intelligent Systems",
     "2. Areas/Computer Science/Robotics & Control",
     "2. Areas/Computer Science/Natural Language Processing",
-    "2. Areas/Computer Science/Computer Vision",
-    "6. Images/bubble-sort-0-dc86a88ab889d19e8ffad6cba3eb6e2f.gif",
-    "6. Images/insertion-sort-e8e40865ca8316a75a00ae32347acffb.gif",
-    "6. Images/selection-sort-0-dc86a88ab889d19e8ffad6cba3eb6e2f 1.gif",
-    "selection-sort-0-dc86a88ab889d19e8ffad6cba3eb6e2f.gif",
-    "insertion-sort-e8e40865ca8316a75a00ae32347acffb 2.gif",
-    "insertion-sort-e8e40865ca8316a75a00ae32347acffb 1.gif",
-    "6. Images/array.png",
-    "6. Images/SCR-20260110-bxmg.png"
+    "2. Areas/Computer Science/Computer Vision"
   ]
 }
