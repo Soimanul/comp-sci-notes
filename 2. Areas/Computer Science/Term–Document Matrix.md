@@ -2,22 +2,24 @@
 **Related:** [[Bag-of-Words (BoW)]] · [[Distributional Hypothesis]] · [[TF–IDF]] · [[Latent Semantic Analysis (LSA)]]
 
 ## Definition
-A **term–document matrix** is a matrix representation of a corpus where entries encode the association between **terms** and **documents**, typically as counts or weighted counts.
+Once text is represented as a Bag-of-Words, it can be encoded numerically into a larger matrix structure.
 
-## Orientation (be explicit)
+A **term–document matrix** is a matrix representation of a corpus where entries encode the association between **terms** and **documents**, typically as counts or weighted counts. 
+
+## Orientation 
 Two equivalent conventions exist:
-- **Term–document:** rows = terms, columns = documents  
-- **Document–term:** rows = documents, columns = terms  
-The choice is not mathematical content; it determines whether “documents” are row vectors or column vectors in downstream formulas.
+- **Term–document:** `rows = terms (words)`, `columns = documents`  
+- **Document–term:** `rows = documents`, `columns = terms (words)`
 
-## What the entries mean
-- Basic form: \(X_{t,d}\) = count of term t in document d
-- Weighted form: \(X_{t,d}\) = TF–IDF (or other weight) for term t in document d
+> [!tip] The default choice is the Term-document convention
 
-## Why it is the central object
-- Each **document vector** is a column/row of the matrix.
-- Each **term vector** is the corresponding row/column across documents.
-- Similarity computations (cosine, etc.) and weighting schemes operate on this matrix representation.
+## Mathematical foundation
+In these models each word 𝑤𝑖 is represented by a vector:
+$$\vec{w}_i = (X_{i1}\ , X_{i2}\ , \cdots\ , X_{in})$$
+This implies that words with similar usage patterns will have similar vectors, consequently words that occur in similar contexts tend to have similar meanings.
+
+> [!info]
+Additionally, similarity computations (cosine, etc.) and weighting schemes operate on this matrix representation.
 
 ## Conceptual consequences
 - The matrix is usually **sparse** (large vocabulary, most terms absent in most documents).

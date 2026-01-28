@@ -4,6 +4,8 @@
 ## Definition
 A **Vector Space Model** represents linguistic objects (documents, queries, words) as **vectors of features** derived from a corpus, placing them in a **continuous numerical space** where **proximity corresponds to similarity**.
 
+![[Pasted image 20260128122027.png]]
+
 ## Core Idea: Symbols → Space
 - Earlier representations treat language as **discrete symbols** (tokens), where relationships are defined via **order, adjacency, or frequency**.
 - In VSMs, **documents and queries become vectors**, and linguistic units are mapped to points in a continuous space.
@@ -18,9 +20,9 @@ A **Vector Space Model** represents linguistic objects (documents, queries, word
 
 ## What VSM enables
 - A unified algebraic framework for comparing:
-  - document–document similarity
-  - query–document similarity
-  - word–word similarity (when words are represented as vectors)
+  - document–to-document similarity
+  - query–to-document similarity
+  - word–to-word similarity (when words are represented as vectors)
 
 ## Limitations / Assumptions (implied by the framework)
 - Requires choosing a feature set (vocabulary) and weighting scheme.

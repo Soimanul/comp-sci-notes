@@ -11,12 +11,14 @@
             "id": "a3dac9b602187373",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "6. Images/SCR-20260128-kwns.png"
+                "file": "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "SCR-20260128-kwns"
+              "icon": "lucide-file",
+              "title": "Natural Language Processing"
             }
           }
         ]
@@ -76,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5
+    "width": 363.5,
+    "collapsed": true
   },
   "right": {
     "id": "5526dbe9e1211c42",
@@ -92,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Symbolic view of language.md",
+                "file": "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Symbolic view of language"
+              "title": "Backlinks for Natural Language Processing"
             }
           },
           {
@@ -111,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Symbolic view of language.md",
+                "file": "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Symbolic view of language"
+              "title": "Outgoing links from Natural Language Processing"
             }
           },
           {
@@ -154,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. Projects/Migrating/Y2S1 - Data Structures and Algorithms/Data Structures and Algorithms.md",
+                "file": "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Data Structures and Algorithms"
+              "title": "Outline of Natural Language Processing"
             }
           },
           {
@@ -192,29 +195,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0845d5bcf1254844",
+  "active": "9f80f53609440980",
   "lastOpenFiles": [
+    "2. Areas/Computer Science/NLP Fundamentals.md",
+    "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
+    "2. Areas/Computer Science/Advanced NLP Concepts.md",
+    "2. Areas/Computer Science/Term–Document Matrix.md",
+    "2. Areas/Computer Science/Bag-of-Words (BoW).md",
+    "Pasted image 20260128130127.png",
+    "2. Areas/Computer Science/One-hot Encoding.md",
+    "Encoding in modern systems.md",
+    "1,0,0,0,0], [0,1,0,0,0], [0,0,1,0,0], [0,0,0,1,0], [0,0,0,0,1.md",
+    "2. Areas/Computer Science/What “meaning” means in a vector space.md",
+    "2. Areas/Computer Science/Vector Space Model (VSM).md",
+    "Pasted image 20260128122027.png",
+    "6. Images/SCR-20260128-kwns.png",
     "6. Images/Pasted image 20260128120653.png",
     "6. Images/Pasted image 20260128120613.png",
     "6. Images/Pasted image 20260128120338.png",
-    "2. Areas/Computer Science/Vector Space Model (VSM).md",
     "backpropagation_in_neural_network_8.webp",
-    "2. Areas/Computer Science/Advanced NLP Concepts.md",
-    "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
-    "2. Areas/Computer Science/NLP Fundamentals.md",
     "2. Areas/Computer Science/Epoch.md",
     "2. Areas/Computer Science/Feedforward Neural Network.md",
     "2. Areas/Computer Science/Multilayer Perceptron.md",
     "6. Images/Pasted image 20260128120945.png",
     "2. Areas/Computer Science/Perceptron.md",
-    "6. Images/SCR-20260128-kwns.png",
     "2. Areas/Computer Science/Normalization (in NLP).md",
     "2. Areas/Computer Science/Bias (Neural Networks).md",
     "2. Areas/Computer Science/Activation Functions.md",
     "6. Images/DeqKjeD6qNmhUNiDfoPBb3xfafw.avif",
     "6. Images/mcp_neuron_simple.png",
-    "6. Images/perceptron_bias_effect.png",
-    "6. Images/perceptron_labeled (2).png",
     "2. Areas/Computer Science/McCulloch-Pitts Neuron.md",
     "2. Areas/Computer Science/Backpropagation.md",
     "2. Areas/Computer Science/NLP Preprocessing.md",
@@ -224,11 +233,6 @@
     "2. Areas/Computer Science/Heuristic.md",
     "2. Areas/Computer Science/Greedy Algorithms.md",
     "2. Areas/Computer Science/Lemmatization.md",
-    "2. Areas/Computer Science/Stemming.md",
-    "2. Areas/Computer Science/Subwords.md",
-    "2. Areas/Computer Science/Morphemes.md",
-    "2. Areas/Computer Science/Tokenization.md",
-    "2. Areas/Computer Science/Distributional Meaning.md",
     "Untitled.canvas",
     "Jaccard / Dice ",
     "Jaccard ",
