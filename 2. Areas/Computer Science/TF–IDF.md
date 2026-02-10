@@ -19,12 +19,12 @@ with $tf$ and $idf$ chosen from standard variants.
 - Documents become TF–IDF vectors.
 - Queries are represented in the same space (often as TF–IDF too).
 - Similarity is computed with cosine similarity (commonly after normalization):
-  - see [[Cosine Similarity]] and [[Normalization: magnitude vs direction]].
+  - see [[Cosine Similarity]] and [[Normalization - magnitude vs direction]].
 
 ## What TF–IDF does not solve
 - It does not introduce meaning beyond lexical overlap; it reweights overlap.
 - It still struggles with vocabulary mismatch (synonymy) and multiple senses (polysemy):
-  - see [[Limits of TF–IDF: synonymy and polysemy]].
+  - see [[Limits of TF–IDF]].
 
 ## Why it matters in the progression
 TF–IDF is the standard improvement over BoW and also the typical input to latent methods like [[Latent Semantic Analysis (LSA)]].

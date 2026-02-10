@@ -1,0 +1,158 @@
+Spring 2026
+
+Lecture 7
+
+Instructor: Luciano Dyballa
+
+We saw many di erent " avors" of gradient descent:
+
+fl
+
+ff
+
+super important!
+
+We saw many di erent " avors" of gradient descent:
+super important!
+
+Here are some examples of what can happen to the loss over training:
+
+fl
+
+ff
+
+neither too low nor too high
+
+We saw many di erent " avors" of gradient descent:
+super important!
+
+Here are some examples of what can happen to the loss over training:
+Q: in prac ce, what learning rate should we use if we
+can't nd a par cular value that produces the "good" curve?
+
+fl
+
+ff
+
+ti
+
+ti
+
+fi
+
+neither too low nor too high
+
+We saw many di erent " avors" of gradient descent:
+super important!
+
+Here are some examples of what can happen to the loss over training:
+Q: in prac ce, what learning rate should we use if we
+can't nd a par cular value that produces the "good" curve?
+A: all of them! Start with large learning rate and decay over me.
+want to make quick progress in the beginning, but also
+converge to very low loss values at the end of training
+
+ti
+
+fl
+
+ff
+
+ti
+
+ti
+
+fi
+
+neither too low nor too high
+
+How should we do this concretely?
+
+any ideas?
+
+this is known as a "training schedule"
+
+Credit: J. Johnson (UMich)
+
+moving average
+over several iterations
+
+this is known as a "training schedule"
+
+issue: more hyperparameters...
+
+Credit: J. Johnson (UMich)
+
+in practice, look at the training curve
+and decay once it plateaus
+
+no additional hyperparams:
+
+Credit: J. Johnson (UMich)
+
+initial LR
+
+total # of epochs
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+potential issue: the model spends very little
+time at the high initial LR
+
+Credit: J. Johnson (UMich)
+
+most commonly used! may not the best possible option,
+but usually quite reasonable to begin with until you are
+far along into the process of developing your model
+especially true if we use advanced SGD techniques (e.g., Adam)
+
+How long should we train for?
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Three useful curves to keep track ok:
+
+Credit: J. Johnson (UMich)
+
+Three useful curves to keep track ok:
+
+Choosing hyperparameters
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+some hyperparameters might matter more than others!
+
+Credit: J. Johnson (UMich)
+
+some hyperparameters might matter more than others!
+
+here we are "wasting" effort by
+repeating the same 3 values for
+the important parameter
+
+some hyperparameters might matter more than others!
+
+Credit: J. Johnson (UMich)
+
+here we end up learning
+more information about
+the distribution for the
+important parameter
+
+here we are "wasting" effort by
+repeating the same 3 values for
+the important parameter
+
+non-trivial interaction between learning rate and regularization strength
+
+Choosing hyperparameters (without using tons of GPUs!)
+
+Quiz: why log(C)?
+
+

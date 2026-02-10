@@ -35,4 +35,26 @@
 ---
 ## Module 2: Machine Learning and Text Analysis Techniques
 
-### Session 6:
+### Session 6: [[Regular Expressions (Regex)]]
+- [[Regex Basic Patterns]]
+- [[Lookarounds]]
+- [[Regex in NLP Pipeline]]
+
+### Session 7: [[Information Retrieval]]
+- [[Information Retrieval vs Information Extraction]]
+- [[Relevance Feedback]]
+- [[Statistical Relevance]]
+- [[Limits of Statistical Relevance]]
+
+### Session 9: [[Naïve Bayes]]
+- [[Text Classification]]
+- [[Evaluation Metrics for Classifiers]]
+- [[Naïve Bayes Independence Assumption]]
+- [[Laplace Smoothing]]
+
+### Session 10: [[Logistic Regression]]
+- [[Maximum Entropy Classifier]]
+- [[Entropy (in Information Theory)]]
+- [[Log-Odds]]
+- [[Feature Functions]]
+- [[Cross-Entropy Minimization]]

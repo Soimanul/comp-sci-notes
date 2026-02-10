@@ -2,14 +2,12 @@
 **Related:** [[Geometric View of Meaning]] · [[Normalization: magnitude vs direction]] · [[Vector Space Model (VSM)]] · [[TF–IDF]]
 
 ## Definition
-**Cosine similarity** measures similarity between two vectors by the cosine of the angle between them:
-\[
-\cos(\theta)=\frac{x \cdot y}{\|x\|\|y\|}
-\]
+**Cosine similarity** measures similarity between two vectors by the cosine of the angle between them: 
+$$cos(\theta)=\dfrac{x \cdot y}{\|x\|\|y\|}$$
 It emphasizes **direction** rather than magnitude.
 
-## Why it is used in NLP vector spaces
-- Document/word vectors can differ greatly in length (document size, term frequency volume).
+## Why it is used in NLP vector spaces 
+- Document/word vectors can differ greatly in length (document size, term frequency volume). 
 - Cosine reduces sensitivity to raw magnitude, focusing on the pattern of feature weights.
 
 ## Interpretation

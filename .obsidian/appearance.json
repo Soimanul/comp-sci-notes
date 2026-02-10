@@ -1,10 +1,13 @@
 {
-  "monospaceFontFamily": "JetBrainsMonoNL Nerd Font",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
   "cssTheme": "Flexoki",
-  "accentColor": "#c39dfb",
+  "accentColor": "",
   "textFontFamily": "Lilex",
   "interfaceFontFamily": "IBM Plex Sans",
   "theme": "system",
   "translucency": true,
-  "showRibbon": true
+  "showRibbon": true,
+  "enabledCssSnippets": [
+    "theme-override"
+  ]
 }

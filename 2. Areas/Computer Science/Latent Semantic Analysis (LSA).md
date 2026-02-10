@@ -31,4 +31,4 @@ This projects terms and documents into a shared latent space.
 - Requires selecting $k$ and can be sensitive to corpus/domain shifts.
 
 ## Place in the pipeline
-LSA is a “global structure” method: it derives semantics from corpus-wide patterns. Compare with the local-context approach in [[HAL: Contextual Co-occurrence]].
+LSA is a “global structure” method: it derives semantics from corpus-wide patterns. Compare with the local-context approach in [[HAL - Contextual Co-occurrence]].

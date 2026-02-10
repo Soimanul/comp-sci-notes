@@ -1,0 +1,2287 @@
+Lecture 5: Backpropagation
+Spring 2026
+
+Lecture 5
+
+Instructor: Luciano Dyballa
+
+Last time: multi-layer perceptrons (MLPs)
+
+TensorFlow Playground
+
+Regression
+
+Regression
+It turns out we can use the same basic neuron model and apply it to a
+di erent kind of task, only by changing its loss function.
+we will also drop its non-linearity (activation function)
+
+So far, we have been doing classi cation: trying to output the correct class
+(a binary vector) for each sample.
+
+fi
+
+ff
+
+Let's try to learn a real-valued function, i.e. predict a scalar instead.
+
+Motivating example: predicting the spiciness score of a dish
+
+x⃗
+
+input vector
+
+🌶
+
+Motivating example: predicting the spiciness score of a dish
+
+🌶
+
+Weight interpretation:
+
+4
+
+3.5
+
+1.5
+
+-3
+0.9
+
++ 0.5 =
+
+6.95
+
+🥵
+
+0.6
+0.1
+
+w
+
+T
+⃗
+
+weight vector
+
+x⃗
+
++ b
+
+input vector
+
+bias
+
+= z
+score
+
+we are predicting
+a real number [0-10]!
+no longer predicting
+a class
+
+Image source: Public domain
+
+0.8
+
+Motivating example: predicting the spiciness score of a dish
+
++
+0.8
+
+4
+
+3.5
+
+1.5
+
+-3
+0.9
+
+what happens if we add some yogurt?
+
++ 0.5 =
+
+5.75
+
+😋
+
+0.6
+0.5
+
+w
+
+T
+⃗
+
+weight vector
+
+x⃗
+
++ b
+
+input vector
+
+bias
+
+= z
+score
+
+we are predicting
+a real number [0-10]!
+no longer predicting
+a class
+
+Image source: Wikimedia Commons
+
+Weight interpretation:
+
+🌶
+
+This really amounts to...
+
+Goal: by fitting our points
+with a line, we can predict y
+for new values of x
+
+Credit: Pearson Education, M. Gadal-Haqq
+
+y
+y
+
+this becomes fitting a hyperplane
+
+can represent this as a neuron!
+
+Adapted from: Pearson Education, M. Gadal-Haqq
+
+We need a di erent loss function
+• Converting scores into probabilities doesn't make sense for regression
+
+ff
+
+• Want to measure how far we are from the true output
+
+We need a di erent loss function
+• Converting scores into probabilities doesn't make sense for regression
+• Want to measure how far we are from the true output
+Let's measure the di erence between the prediction and its true value:
+
+ff
+
+ff
+
+}
+
+how big is this difference?
+
+We need a di erent loss function
+• Converting scores into probabilities doesn't make sense for regression
+• Want to measure how far we are from the true output
+Let's measure the di erence between the prediction and its true value:
+
+N
+
+∑
+
+y − ŷ
+
+i=1
+
+Q: will this work?
+
+ff
+
+}
+
+}
+}
+
+}
+
+}
+
+compute all the differences and add them up: Loss =
+
+ff
+
+}
+
+}
+}
+
+}
+
+}
+
+We need a di erent loss function
+• Converting scores into probabilities doesn't make sense for regression
+• Want to measure how far we are from the true output
+Let's measure the di erence between the prediction and its true value:
+
+N
+
+∑
+
+y − ŷ
+
+i=1
+
+ff
+
+Simply adding the di erences
+won't work. different signs cancel out
+ff
+
+}
+
+}
+}
+
+}
+
+}
+
+compute all the differences and add them up: Loss =
+
+ff
+
+}
+
+}
+}
+
+}
+
+}
+
+We need a di erent loss function
+• Converting into probabilities doesn't make sense for regression
+• Want to measure how far we are from the true output
+Let's measure the di erence between the prediction and its true value:
+Idea: use squared errors instead:
+
+2
+
+ℓi = (yi − yî )
+
+a.k.a. mean sq. error , or "MSE"
+
+N
+
+ff
+
+ff
+
+1
+2
+Overall Loss =
+(y − y)̂
+∑
+N i=1
+
+Last time: hidden layers transform our data features!
+
+Last time: hidden layers transform our data features!
+dot prod.
+
+After all, applying a layer
+to an input vector is
+equivalent to applying a
+function, e.g.:
+
+f(x1, x2) = (w11x1 + w12x2 + b1,
+
+)
+
+each neuron contributes with more details for this overall function being applied to our input values
+
+Last time: hidden layers transform our data features!
+sigmoid
+
+After all, applying a layer
+to an input vector is
+equivalent to applying a
+function, e.g.:
+
+f(x1, x2) =
+
+(1 + e
+
+1
+
+,
+−(w x +w x +b )
+11 1
+
+12 2
+
+1
+
+)
+
+each neuron contributes with more details for this overall function being applied to our input values
+
+Last time: hidden layers transform our data features!
+
+dot prod.
+
+After all, applying a layer
+to an input vector is
+equivalent to applying a
+function, e.g.:
+
+f(x1, x2) =
+
+(1 + e
+
+1
+
+)
+
+,
+w
+x
++
+w
+x
++
+b
+21
+1
+22
+2
+2
+−(w x +w x +b )
+11 1
+
+12 2
+
+1
+
+Last time: hidden layers transform our data features!
+
+sigmoid
+
+After all, applying a layer
+to an input vector is
+equivalent to applying a
+function, e.g.:
+
+f(x1, x2) =
+
+(1 + e
+
+1
+
+,
+−(w x +w x +b )
+11 1
+
+12 2
+
+1
+
+1 + e −(w21x1+w22x2+b2) )
+1
+
+each neuron contributes with more details for this overall function being applied to our input values
+
+Last time: hidden layers transform our data features!
+
+dot prod.
+
+And the nal layer takes the
+transformed variables and
+computes the output values:
+
+f(x1, x2) = w3
+
+1
+
+1 + e −(w11x1+w12x2+b1)
+
++
+
+w4
+
+1
+
+1 + e −(w21x1+w22x2+b2)
+
+fi
+
+each neuron contributes with more details for this overall function being applied to our input values
+
+Last time: hidden layers transform our data features!
+
+sigmoid
+
+And the nal layer takes the
+transformed variables and
+computes the output values:
+
+f(x1, x2) =
+
+1
+
+1+e
+
+w3
+w4
+−(
++
+−(w
+x
++w
+x
++b
+)
+11 1 12 2 1
+1+e
+1 + e−(w21x1+w22 x2+b2) )
+
+fi
+
+each neuron contributes with more details for this overall function being applied to our input values
+
+Last time: hidden layers transform our data features!
+
+cross-entropy
+
+Finally, we compute the loss
+for that particular input vector:
+(assuming class +1 here)
+
+f(x1, x2) =
+
+−log
+
+1
+
+1+e
+
+w3
+w4
+−(
++
+−(w
+x
++w
+x
++b
+)
+11 1 12 2 1
+1+e
+1 + e−(w21x1+w22 x2+b2) )
+
+Last time: hidden layers transform our data features!
+
+cross-entropy
+
+Finally, we compute the loss
+for that particular input vector:
+(assuming class +1 here)
+
+f(x1, x2) =
+
+Can we apply gradient descent
+to a function like this?
+
+−log
+
+1
+
+1+e
+
+w3
+w4
+−(
++
+−(w
+x
++w
+x
++b
+)
+11 1 12 2 1
+1+e
+1 + e−(w21x1+w22 x2+b2) )
+
+Applying calculus to learn weights:
+backpropagation
+
+Applying calculus to learn weights:
+backpropagation
+
+Credit: P. Winston (MIT)
+
+x
+
+zl
+
+al
+
+x, wl, zl, and al
+
+zr
+
+ar
+
+Credit: P. Winston (MIT)
+
+x
+
+zl
+
+zr
+
+al
+
+x, wl, zl, and al
+
+al, wr, zr, and ar
+
+ar
+
+Loss function:
+
+x
+
+zl
+
+zr
+
+al
+
+ar
+
+L = f(y, ar)
+
+Credit: P. Winston (MIT)
+
+some function
+comparing the output ar
+with the desired output, y
+
+x, wl, zl, and al
+
+al, wr, zr, and ar
+
+Loss function:
+
+x
+
+zl
+
+zr
+
+al
+
+ar
+
+L = f(y, ar)
+
+Credit: P. Winston (MIT)
+
+some function
+comparing the output ar
+with the desired output, y
+
+squared error?
+cross-entropy?
+etc.
+x, wl, zl, and al
+
+al, wr, zr, and ar
+
+Partial derivatives
+To measure the rate at which each weight contributes to the loss, we can compute partial derivatives:
+
+Credit: P. Winston (MIT)
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+
+To compute the partial derivative of L w.r.t. the weight of the right neuron, wr,
+one strategy is to write out the entire formula for it:
+
+∂L
+∂
+1
+=
+f
+∂wr ∂ar ( 1 + e −wral )
+
+as the network gets larger, this expression
+becomes very complicated — and you need
+one expression for each individual weight
+
+Partial derivatives
+To measure the rate at which each weight contributes to the loss, we can compute partial derivatives:
+
+Credit: P. Winston (MIT)
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+
+To compute the partial derivative of L w.r.t. the weight of the right neuron, wr,
+one strategy is to write out the entire formula for it: look at the formula for dL/dwl:
+
+∂L
+∂
+1
+=
+f
+∂wr ∂wr ( 1 + e −wral )
+
+∂L
+∂
+1
+=
+f
+−wl x
+−w
+e
+)
+∂wl ∂wl ( 1 + e r
+
+Partial derivatives
+To measure the rate at which each weight contributes to the loss, we can compute partial derivatives:
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+
+Credit: P. Winston (MIT)
+
+where y is the
+desired output
+
+A better approach is to use the chain rule, which allows you to compute partial derivatives
+of one variable with respect to another by means of an intermediate variable.
+
+∂ar
+∂L
+∂L
+=
+×
+taking ar to be the intermediate variable
+∂wr ∂ar ∂wr
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+A better approach is to use the chain rule, which allows you to compute partial derivatives
+of one variable with respect to another by means of an intermediate variable.
+
+Credit: P. Winston (MIT)
+
+∂ar
+∂L
+∂L
+=
+×
+taking ar to be the intermediate variable
+∂wr ∂ar ∂wr
+
+∂ar
+∂ar ∂zr
+Now, you can repeat, using the chain rule to turn
+into
+×
+:
+∂wr
+∂zr ∂wr
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+derivative of the loss w.r.t. the activation ar
+
+If the loss is squared error, we have:
+∂ 1
+2
+(y − ar) =
+∂ar 2
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+let's use sq. error for now
+
+derivative of the loss w.r.t. the activation ar
+
+If the loss is squared error, we have:
+∂ 1
+2
+(y − ar) = − (y − ar) = ar − y
+∂ar 2
+
+very simple formula!
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of the loss w.r.t. the activation ar
+
+If the loss is squared error, we have:
+∂ 1
+2
+(y − ar) = − (y − ar) = ar − y
+∂ar 2
+If the loss is binary cross-entropy, we have:
+
+∂
+− log ar =
+∂ar
+
+for the positive class (y = +1)
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of the loss w.r.t. the activation ar
+
+If the loss is squared error, we have:
+∂ 1
+2
+(y − ar) = − (y − ar) = ar − y
+∂ar 2
+If the loss is binary cross-entropy, we have:
+
+∂
+1
+− log ar = −
+∂ar
+ar
+
+for the positive class (y = +1)
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of the loss w.r.t. the activation ar
+
+If the loss is squared error, we have:
+∂ 1
+2
+(y − ar) = − (y − ar) = ar − y
+∂ar 2
+If the loss is binary cross-entropy, we have:
+
+∂
+1
+− log ar = −
+∂ar
+ar
+
+for the positive class (y = +1)
+
+∂
+− log(1 − ar) =
+∂ar
+
+for the negative class (y = -1 or y = 0)
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of the loss w.r.t. the activation ar
+
+If the loss is squared error, we have:
+∂ 1
+2
+(y − ar) = − (y − ar) = ar − y
+∂ar 2
+If the loss is binary cross-entropy, we have:
+
+∂
+1
+− log ar = −
+∂ar
+ar
+
+for the positive class (y = +1)
+
+∂
+1
+− log(1 − ar) =
+∂ar
+1 − ar
+
+for the negative class (y = -1 or y = 0)
+
+very simple formulas!
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr 1 + e r
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+−zr −2
+
+= (1 + e )
+
+e
+
+−zr
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+−zr
+
+e
+−zr −2 −zr
+= (1 + e ) e =
+(1 + e −zr)2
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+−zr
+
+−zr
+
+e
+e
+1
+−zr −2 −zr
+= (1 + e ) e =
+=
+(1 + e −zr)2 1 + e −zr 1 + e −zr
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+e
+e
+1
+−zr −2 −zr
+= (1 + e ) e =
+=
+−z
+−z
+−z
+2
+(
+r
+r
+(1 + e )
+1+e
+1 + e r)
+
+*trick*
+
+−zr
+
+−zr
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+e
+e
+1
+−zr −2 −zr
+= (1 + e ) e =
+=
+−z
+−z
+−z
+2
+(
+r
+r
+(1 + e )
+1+e
+1 + e r)
+
+*trick*
+
+−zr
+
+1+e −1
+1
+=
+1 + e −zr ( 1 + e −zr )
+−zr
+
+−zr
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+e
+e
+1
+−zr −2 −zr
+= (1 + e ) e =
+=
+−z
+−z
+−z
+2
+(
+r
+r
+(1 + e )
+1+e
+1 + e r)
+
+*trick*
+
+−zr
+
+−zr
+
+1+e −1
+1
+1+e
+1
+1
+=
+=
+−
+( 1 + e −zr 1 + e −zr ) ( 1 + e −zr )
+1 + e −zr ( 1 + e −zr )
+−zr
+
+−zr
+
+1
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+e
+e
+1
+−zr −2 −zr
+= (1 + e ) e =
+=
+−z
+−z
+−z
+2
+(
+r
+r
+(1 + e )
+1+e
+1 + e r)
+*trick*
+σ
+σ
+−zr
+−zr
+1+e −1
+1
+1+e
+1
+1
+=
+=
+−
+( 1 + e −zr 1 + e −zr ) ( 1 + e −zr )
+1 + e −zr ( 1 + e −zr )
+−zr
+
+−zr
+
+1
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+e
+e
+1
+−zr −2 −zr
+= (1 + e ) e =
+=
+−z
+−z
+−z
+2
+(
+r
+r
+(1 + e )
+1+e
+1 + e r)
+*trick*
+σ
+σ
+−zr
+−zr
+1+e −1
+1
+1+e
+1
+1
+=
+=
+−
+( 1 + e −zr 1 + e −zr ) ( 1 + e −zr )
+1 + e −zr ( 1 + e −zr )
+−zr
+
+−zr
+
+1
+
+= (1 − σ(zr))σ(zr)
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y) × ar(1 − ar)
+
+derivative of activation ar (sigmoid) w.r.t. the score zr:
+
+∂ar
+∂
+∂
+1
+∂
+−zr −1
+(1
++
+e
+)
+=
+σ(zr) =
+=
+−z
+∂zr
+∂zr
+∂zr
+∂zr 1 + e r
+power rule
+
+e
+e
+1
+−zr −2 −zr
+= (1 + e ) e =
+=
+−z
+−z
+−z
+2
+(
+r
+r
+(1 + e )
+1+e
+1 + e r)
+
+*trick*
+
+−zr
+
+−zr
+
+1+e −1
+1
+1+e
+1
+1
+=
+=
+−
+( 1 + e −zr 1 + e −zr ) ( 1 + e −zr )
+1 + e −zr ( 1 + e −zr )
+−zr
+
+−zr
+
+very simple formula!
+
+= (1 − σ(zr))σ(zr) = ar(1 − ar)
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y) × ar(1 − ar)
+
+derivative of score zr w.r.t. the input al:
+
+∂zr
+∂
+=
+wral =
+∂al ∂al
+
+Now, it's easy to evaluate each term separately:
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y) × ar(1 − ar) × al
+
+derivative of score zr w.r.t. the input al:
+
+∂zr
+∂
+=
+wral = al
+∂wr ∂wr
+
+super simple formula!
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+Repeating the analysis for the left weight, wl, yields the following:
+
+Credit: P. Winston (MIT)
+
+∂L
+∂L ∂ar
+=
+×
+∂wl ∂ar ∂wl
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+Repeating the analysis for the left weight, wl, yields the following:
+
+Credit: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wl ∂ar ∂zr ∂wl
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+Repeating the analysis for the left weight, wl, yields the following:
+
+Credit: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr ∂al
+=
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂wl
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+Repeating the analysis for the left weight, wl, yields the following:
+
+Credit: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+= can you compute it yourself?
+
+zl
+
+x
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+Repeating the analysis for the left weight, wl, yields the following:
+
+Credit: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+= (ar − y)
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+Repeating the analysis for the left weight, wl, yields the following:
+
+Credit: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+= (ar − y) ar(1 − ar)
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+Repeating the analysis for the left weight, wl, yields the following:
+
+Credit: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+different than before! we now want dzr/dal instead of dzr/dwr
+
+= (ar − y) ar(1 − ar) wr
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+Repeating the analysis for the left weight, wl, yields the following:
+
+Credit: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+= (ar − y) ar(1 − ar) wr al(1 − al)
+
+x
+
+zl
+
+al
+
+zr
+
+ar
+
+L = f(y, ar)
+where y is the
+desired output
+
+Adapted from: P. Winston (MIT)
+
+Repeating the analysis for the left weight, wl, yields the following:
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+= (ar − y) ar(1 − ar) wr al(1 − al) x
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+Adapted from: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+Adapted from: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+notice that there are common terms
+
+Adapted from: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y) ar(1 − ar) al
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+
+= (ar − y) ar(1 − ar) wr al(1 − al) x
+
+this means we don't have to recompute
+everything from scratch for each parameter!
+
+Adapted from: P. Winston (MIT)
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y) ar(1 − ar) al
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+
+= (ar − y) ar(1 − ar) wr al(1 − al) x
+
+this means we don't have to recompute
+everything from scratch for each parameter!
+as we move backwards, simply keep adding terms to the overall product
+
+∂L
+∂L ∂ar ∂zr
+=
+×
+×
+∂wr ∂ar ∂zr ∂wr
+
+= (ar − y) ar(1 − ar) al
+
+∂L
+∂L ∂ar ∂zr ∂al ∂zl
+=
+×
+×
+×
+×
+∂wl ∂ar ∂zr ∂al ∂zl ∂wl
+
+= (ar − y) ar(1 − ar) wr al(1 − al) x
+
+this means we don't have to recompute
+everything from scratch for each parameter!
+as we move backwards, simply keep adding terms to the overall product
+backpropagate
+
+We arrive at very convenient formulas:
+
+If you'd like to derive all the details:
+
+Credit: P. Winston (MIT), Nielsen
+
+http://neuralnetworksanddeeplearning.com/chap2.html
+
+optional, but highly recommended! 💪
+
+A bit of historical perspective
+
+fi
+
+Q: When do you think this backpropagation scheme was rst proposed?
+
+A bit of historical perspective
+Q: When do you think this backpropagation scheme was rst proposed?
+
+fi
+
+almost 30 years after the perceptron algorithm!
+
+A bit of historical perspective
+Q: When do you think this backpropagation scheme was rst proposed?
+
+actually, it had been applied to neural nets back in the 70s....
+
+fi
+
+still, this is over 15 years after the perceptron!
+
+Problem: how to compute gradients for any type of neural network?
+
+Adapted from: J. Johnson (UMich)
+
+Idea 1:
+
+Problem: how to compute gradients for any type of neural network?
+
+Adapted from: J. Johnson (UMich)
+
+Idea 1:
+
+Problem: how to compute gradients for any type of neural network?
+
+Adapted from: J. Johnson (UMich)
+
+Idea 1:
+
+more complex models require
+an automated algorithm for differentiation!
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Adapted from: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Adapted from: J. Johnson (UMich)
+
+we start with the "base case"
+
+Adapted from: J. Johnson (UMich)
+
+?
+
+Credit: J. Johnson (UMich)
+
+Adapted from: J. Johnson (UMich)
+
+?
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Adapted from: J. Johnson (UMich)
+
+1 x -4 = -4
+
+Credit: J. Johnson (UMich)
+
+Adapted from: J. Johnson (UMich)
+
+1 x -4 = -4
+
+Let's zoom into a single node in this graph:
+
+Adapted from: J. Johnson (UMich)
+
+Key: each local piece of the graph does not need to know
+about any other part of the graph!
+
+Let's zoom into a single node in this graph:
+
+Adapted from: J. Johnson (UMich)
+
+Key: each local piece of the graph does not need to know
+about any other part of the graph!
+
+Local processing leads to global partial derivatives!
+
+Let's zoom into a single node in this graph:
+Let's repeat what we did before, but now in the context of a single node in the graph:
+
+Adapted from: J. Johnson (UMich)
+
+We begin with a forward pass....
+
+Adapted from: J. Johnson (UMich)
+
+Let's zoom into a single node in this graph:
+
+Eventually, backprop reaches this node and will bring the current
+derivative of the loss w.r.t. the output variable of this node
+
+Adapted from: J. Johnson (UMich)
+
+Let's zoom into a single node in this graph:
+
+this node knows the gradient of its own function f
+w.r.t. to its inputs, so it can compute it applied to z
+
+Let's zoom into a single node in this graph:
+
+Adapted from: J. Johnson (UMich)
+
+finally, by the chain rule, all it needs to do is
+multiply its local gradients with the upstream gradient to get the
+downstream ones and pass them along (backpropagate)
+
+Adapted from: J. Johnson (UMich)
+
+Let's zoom into a single node in this graph:
+
+and now the process continues with the previous nodes;
+by the end of this process, we will have computed the gradient of
+the loss w.r.t. to all the inputs of this graph
+
+Adapted from: J. Johnson (UMich)
+
+a logistic classifier!
+(single sigmoid neuron)
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Adapted from: J. Johnson (UMich)
+
+Upstream grad = 1.00
+
+Adapted from: J. Johnson (UMich)
+
+Upstream grad = 1.00
+Local grad = -1/x2 = -1/1.372 = -0.53
+
+Adapted from: J. Johnson (UMich)
+
+Upstream grad = 1.00
+Local grad = -1/x2 = -1/1.372 = -0.53
+Downstream grad = upstream x local = 1.00 x -0.53 = -0.53
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+0.40
+
+Credit: J. Johnson (UMich)
+
+0.40
+
+-0.40
+
+-0.60
+
+0.40
+
+-0.40
+
+ti
+
+fi
+
+Credit: J. Johnson (UMich)
+
+-0.60
+
+We can de ne nodes that perform
+more complex opera ons if they
+have simple local gradients
+
+0.40
+
+-0.40
+
+ti
+
+fi
+
+Credit: J. Johnson (UMich)
+
+-0.60
+
+We can de ne nodes that perform
+more complex opera ons if they
+have simple local gradients
+
+0.40
+
+We can de ne nodes that perform
+more complex opera ons if they
+have simple local gradients
+
+-0.40
+
+Adapted from: J. Johnson (UMich)
+
+-0.60
+
+ti
+
+fi
+
+same value we
+had before ✅
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+we will need this for ReLUs!
+
+Credit: J. Johnson (UMich)
+
+here 7 is used in two different paths,
+thus will cause two different upstream
+gradients to be returned. we must combine
+them in order to compute the total
+downstream gradient
+
+s0
+let's give a name to
+each node's output
+
+s2
+
+Adapted from: J. Johnson (UMich)
+
+s1
+
+s3
+
+L
+
+0.73
+
+Adapted from: J. Johnson (UMich)
+
+s0
+s2
+
+s1
+s3
+0.73
+
+L
+
+Adapted from: J. Johnson (UMich)
+
+s0
+s2
+
+s1
+s3
+0.73
+1.00
+
+L
+
+Adapted from: J. Johnson (UMich)
+
+s0
+s2
+
+s1
+s3
+0.73
+1.00
+
+L
+
+Adapted from: J. Johnson (UMich)
+
+s0
+s2
+
+s1
+s3
+0.73
+1.00
+
+L
+
+Adapted from: J. Johnson (UMich)
+
+s0
+s2
+
+s1
+s3
+0.73
+1.00
+
+L
+
+Adapted from: J. Johnson (UMich)
+
+s0
+s2
+
+s1
+s3
+0.73
+1.00
+
+L
+
+Adapted from: J. Johnson (UMich)
+
+s0
+s2
+
+s1
+s3
+0.73
+1.00
+
+L
+
+Adapted from: J. Johnson (UMich)
+
+need to visit the nodes
+from left to right
+
+Adapted from: J. Johnson (UMich)
+
+here we must reverse the order used above
+
+this is actual PyTorch code
+
+Adapted from: J. Johnson (UMich)
+
+Example of implementation of a particular operation node:
+
+Credit: J. Johnson (UMich)
+
+Credit: J. Johnson (UMich)
+
+Source
+
+Credit: J. Johnson (UMich)
+
+Source
+
+Credit: J. Johnson (UMich)
+
+Source
+
+Adapted from: J. Johnson (UMich)
+
+Summary: backpropagation in practice
+
+

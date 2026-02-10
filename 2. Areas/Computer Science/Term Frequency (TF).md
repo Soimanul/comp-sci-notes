@@ -29,7 +29,7 @@ Used to reduce the impact of very large counts.
 TF may be normalized by document length to reduce bias toward longer documents (often handled separately via vector normalization).
 
 ## Role in TF–IDF
-TF captures **document-specific salience**, while IDF downweights terms that are common across the corpus. The product defines TF–IDF:
+TF captures **document-specific importance**, while IDF down-weights terms that are common across the corpus. The product defines TF–IDF:
 - see [[TF–IDF]].
 
 ## Limitations (TF alone)

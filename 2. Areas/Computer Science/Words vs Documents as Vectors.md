@@ -1,4 +1,4 @@
-**Tags:** #concept #nlp #vector-space-models #distributional-semantics  
+	**Tags:** #concept #nlp #vector-space-models #distributional-semantics  
 **Related:** [[Term–Document Matrix]] · [[Distributional Hypothesis]] · [[Cosine Similarity]] · [[TF–IDF]] · [[Latent Semantic Analysis (LSA)]]
 
 ## Definition

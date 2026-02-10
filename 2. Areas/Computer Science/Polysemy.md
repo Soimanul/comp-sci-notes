@@ -1,5 +1,5 @@
 **Tags:** #concept #nlp #semantics #limitations  
-**Related:** [[TF–IDF]] · [[Bag-of-Words (BoW)]] · [[Latent Semantic Analysis (LSA)]] · [[HAL: Contextual Co-occurrence]]
+**Related:** [[TF–IDF]] · [[Bag-of-Words (BoW)]] · [[Latent Semantic Analysis (LSA)]] · [[HAL - Contextual Co-occurrence]]
 
 ## Definition
 **Polysemy** is the phenomenon where the same surface form has multiple meanings depending on context (e.g., “bank” as financial institution vs river bank).
@@ -13,5 +13,5 @@
 - Similarity scores can be inflated between unrelated documents that share ambiguous terms.
 
 ## Typical remedies in the VSM progression
-- Methods that incorporate context (e.g., window-based co-occurrence like [[HAL: Contextual Co-occurrence]]) help distinguish senses by their local usage patterns.
+- Methods that incorporate context (e.g., window-based co-occurrence like [[HAL - Contextual Co-occurrence]]) help distinguish senses by their local usage patterns.
 - More advanced contextual embeddings (beyond this classical pipeline) explicitly model sense via context-dependent representations.

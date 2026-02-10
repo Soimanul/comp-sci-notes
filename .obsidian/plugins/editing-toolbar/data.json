@@ -405,8 +405,8 @@
   "cMenuWidth": 610,
   "cMenuFontColor": "#2DC26B",
   "cMenuBackgroundColor": "#d3f8b6",
-  "autohide": false,
-  "Iscentered": false,
+  "autohide": true,
+  "Iscentered": true,
   "custom_bg1": "#FFB78B8C",
   "custom_bg2": "#CDF4698C",
   "custom_bg3": "#A0CCF68C",
@@ -425,8 +425,8 @@
   "viewTypeSettings": {},
   "appearanceByStyle": {
     "top": {
-      "toolbarBackgroundColor": "#1A2F28",
-      "toolbarIconColor": "#D4AF37",
+      "toolbarBackgroundColor": "#F8F9FA",
+      "toolbarIconColor": "#6B7280",
       "toolbarIconSize": 18,
       "aestheticStyle": "default"
     },
@@ -449,8 +449,8 @@
       "aestheticStyle": "default"
     }
   },
-  "toolbarBackgroundColor": "#1A2F28",
-  "toolbarIconColor": "#D4AF37",
+  "toolbarBackgroundColor": "#F8F9FA",
+  "toolbarIconColor": "#6B7280",
   "toolbarIconSize": 18,
   "useCurrentLineForRegex": false,
   "commandIdsFixed": true
