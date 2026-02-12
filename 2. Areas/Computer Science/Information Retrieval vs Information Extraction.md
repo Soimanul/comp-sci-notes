@@ -11,4 +11,5 @@ Focuses on **selecting relevant documents** from a collection. The output is an 
 Focuses on **identifying and structuring specific pieces of information** within documents, such as entities, relations, or events. The goal is to transform unstructured text into structured representations (e.g., a database).
 
 ## Significance
-IR helps find *where* the information might be, while IE extracts the *what* from within those sources.
+IR helps find *where* the information might be, while IE extracts the 
+*what* within those sources.

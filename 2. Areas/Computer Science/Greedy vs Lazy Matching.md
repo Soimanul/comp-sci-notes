@@ -7,11 +7,12 @@ Greedy behavior refers to the default tendency of regular expression quantifiers
 ## Core Mechanics
 By default, quantifiers will expand to the largest possible match that still allows the rest of the expression to succeed.
 
-### The Problem
+> [!The Problem]
 If matching text between quotes:
-`".*"` in `"Hello" and "World"` will match `"Hello" and "World"` instead of just `"Hello"`.
+> 
+> `".*"` in `"Hello" and "World"` will match `"Hello" and "World"` instead of just `"Hello"`.
 
-### The Solution: Lazy Matching
+> [!The Solution: Lazy Matching]
 Appending a `?` to a quantifier makes it **lazy** (or non-greedy), meaning it will match as little text as possible.
 `".*?"` in `"Hello" and "World"` will match `"Hello"` and `"World"` as two separate matches.
 

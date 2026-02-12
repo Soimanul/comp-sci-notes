@@ -37,6 +37,7 @@
 
 ### Session 6: [[Regular Expressions (Regex)]]
 - [[Regex Basic Patterns]]
+- [[Special Character Classes]]
 - [[Lookarounds]]
 - [[Regex in NLP Pipeline]]
 

@@ -5,7 +5,7 @@
 A confusion matrix is a table used to describe the performance of a classification model on a set of test data for which the true values are known.
 
 ## Structure
-For a binary classifier, the matrix is a $2 	imes 2$ grid:
+For a binary classifier, the matrix is a $2 \times 2$ grid:
 
 | | Predicted: Negative | Predicted: Positive |
 | :--- | :--- | :--- |
@@ -14,6 +14,7 @@ For a binary classifier, the matrix is a $2 	imes 2$ grid:
 
 ### Errors
 - **Type I Error (False Positive)**: Predicting a positive result when it is negative (False Alarm).
+
 - **Type II Error (False Negative)**: Predicting a negative result when it is positive (Miss).
 
 ## Significance

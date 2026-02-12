@@ -2,11 +2,11 @@
 **Related:** [[Natural Language Processing]], [[Text Classification]]
 
 ## Overview
-Naïve Bayes is a probabilistic, generative classifier based on Bayes' Theorem. It is often referred to as the "simplest classifier" because it assumes that all features (words) are conditionally independent given the class, which greatly simplifies the computation required for text classification tasks.
+Naïve Bayes is a probabilistic, generative classifier based on [[Bayes' Theorem]]. It is often referred to as the "simplest classifier" because it assumes that all features (words) are conditionally independent given the class, which greatly simplifies the computation required for text classification tasks.
 
 ## Knowledge Map
 ### 1. Foundations
-- [[Bayes' Formula]]
+- [[Bayes' Theorem]]
 - [[Text Classification]]
 
 ### 2. The Model

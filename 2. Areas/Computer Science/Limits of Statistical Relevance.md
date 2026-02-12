@@ -1,4 +1,5 @@
-**Tags:** #concept #nlp
+>[!tip]
+>**Tags:** #concept #nlp
 **Related:** [[Statistical Relevance]], [[Information Retrieval]]
 
 ## Definition

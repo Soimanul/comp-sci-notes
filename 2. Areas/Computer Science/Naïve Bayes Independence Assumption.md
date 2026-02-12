@@ -1,5 +1,5 @@
 **Tags:** #concept #nlp
-**Related:** [[Naïve Bayes]], [[Bayes' Formula]]
+**Related:** [[Naïve Bayes]], [[2. Areas/Computer Science/Bayes' Theorem]]
 
 ## Definition
 The "Naïve" part of Naïve Bayes comes from the strong assumption that all features (words) in a document are **conditionally independent** of each other given the class.

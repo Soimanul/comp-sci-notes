@@ -10,7 +10,10 @@ The idea is to "estimate a probability distribution $P(y|x)$ without making unne
 - We require the model's expected value of these features to match the empirical expectations from the training data.
 - The solution to this optimization problem is a model in the **Exponential Family** (Softmax):
 
-$$ P(y|x) = \frac{1}{Z(x)} \exp\left( \sum_{i} \lambda_i f_i(x, y) ight) $$
+$$
+P(y \mid x) = \frac{1}{Z(x)} \exp\left( \sum_i \lambda_i f_i(x, y) \right)
+$$
+
 
 Where:
 - $\lambda_i$ are the learned weights (Lagrange multipliers).

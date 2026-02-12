@@ -17,7 +17,9 @@ All evaluation metrics are derived from the **Confusion Matrix** (True Positives
 
 ## Baseline Models
 To determine if a model is learning anything useful, its performance is compared against simple baselines:
+
 - **Random Classifier**: Labels observations randomly based on uniform probability (usually ~50% metrics for binary classification).
+
 - **Prevalence Classifier**: Always predicts the most common label in the dataset. While it may achieve high accuracy on imbalanced datasets, it fails on precision, recall, and specificity for the minority class.
 
 ## Significance
