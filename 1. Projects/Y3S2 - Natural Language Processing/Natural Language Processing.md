@@ -59,3 +59,44 @@
 - [[Log-Odds]]
 - [[Feature Functions]]
 - [[Cross-Entropy Minimization]]
+
+---
+## Module 3: Sentiment, Supervised Learning, and Representations
+
+### Session 11: [[Sentiment Analysis]]
+- [[Opinion Mining]]
+- [[Subjectivity vs Objectivity in Text]]
+- [[Sentiment Lexicons]]
+- [[VADER]]
+- [[Aspect-Based Sentiment Analysis]]
+
+### Session 12: [[Support Vector Machines]]
+- [[Maximum Margin Classifier]]
+- [[Support Vectors]]
+- [[Soft Margin SVM]]
+- [[Slack Variables]]
+- [[Kernel Trick]]
+- [[Kernel Functions]]
+- [[SVM Dual Formulation]]
+
+### Session 13: [[Word Embeddings]]
+- [[Word2Vec]]
+- [[CBOW vs Skip-gram]]
+- [[GloVe]]
+- [[fastText]]
+- [[Intrinsic vs Extrinsic Evaluation of Embeddings]]
+
+### Session 14: [[POS Tagging]]
+- [[Penn Treebank POS Tagset]]
+- [[Universal POS Tags]]
+- [[HMM-Based POS Tagger]]
+- [[Viterbi Algorithm]]
+- [[Neural POS Tagger]]
+
+### Session 15: [[Named Entity Recognition]]
+- [[BIO Tagging Scheme]]
+- [[BIOES Tagging Scheme]]
+- [[CRF for Sequence Labelling]]
+- [[BERT for NER]]
+
+[[PRESENTATION_SCRIPT]]

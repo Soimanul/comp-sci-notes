@@ -4,24 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "157e79248d1e2101",
+        "id": "4cd22a5a655fcb06",
         "type": "tabs",
         "children": [
           {
-            "id": "ed73e67a47601583",
+            "id": "6ae55648f61f7815",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2. Areas/Computer Science/Frequency Domain Filtering.md",
+                "file": "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Frequency Domain Filtering"
+              "title": "Natural Language Processing"
+            }
+          },
+          {
+            "id": "54f2ad4061937b3b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 367.5
+    "width": 356.5
   },
   "right": {
     "id": "5526dbe9e1211c42",
@@ -195,44 +206,44 @@
       "callout-manager:Insert Callout": false
     }
   },
-  "active": "ed73e67a47601583",
+  "active": "54f2ad4061937b3b",
   "lastOpenFiles": [
-    "2. Areas/Computer Science/Fourier Transform Applications.md",
-    "1. Projects/Y3S2 - Computer Vision/Computer Vision.md",
-    "2. Areas/Computer Science/Geometric Transformations.md",
-    "2. Areas/Computer Science/Image Warping.md",
-    "2. Areas/Computer Science/Image Formation.md",
-    "2. Areas/Computer Science/Fourier Transform.md",
-    "2. Areas/Computer Science/Fourier Series.md",
-    "2. Areas/Computer Science/Image Sensing.md",
-    "2. Areas/Computer Science/Deconvolution.md",
-    "2. Areas/Computer Science/Nyquist Theorem.md",
-    "2. Areas/Computer Science/Convolution Theorem.md",
-    "2. Areas/Computer Science/Frequency Domain Filtering.md",
-    "2. Areas/Computer Science/2D Fourier Transform.md",
-    "2. Areas/Computer Science/Fast Fourier Transform.md",
-    "2. Areas/Computer Science/Discrete Fourier Transform.md",
-    "2. Areas/Computer Science/Fourier Transform (Concept).md",
-    "2. Areas/Computer Science/Morphological Operations.md",
-    "2. Areas/Computer Science/Bilateral Filter.md",
-    "2. Areas/Computer Science/Median Filter.md",
-    "2. Areas/Computer Science/Image Pyramid.md",
-    "2. Areas/Computer Science/Template Matching.md",
-    "2. Areas/Computer Science/Cross-Correlation.md",
-    "2. Areas/Computer Science/Gaussian Filter.md",
-    "2. Areas/Computer Science/Point Spread Function.md",
-    "2. Areas/Computer Science/Convolution.md",
-    "2. Areas/Computer Science/Linear Shift Invariant System.md",
-    "3. Resources/Computer Science/Computer Vision/10_fourier_transform2(1).pptx",
-    "3. Resources/Computer Science/Computer Vision/9_fourier_transform1(1).pptx",
-    "3. Resources/Computer Science/Computer Vision/8_local_transformations2.pptx",
-    "3. Resources/Computer Science/Computer Vision/7_local_transformations1(1).pptx",
-    "3. Resources/Computer Science/Computer Vision/6_intensity_transformations.pptx",
-    "3. Resources/Computer Science/Computer Vision/5_geomtric_tranformations(1).pptx",
-    "3. Resources/Computer Science/Computer Vision/4_image_sensing.pptx",
-    "3. Resources/Computer Science/Computer Vision/3_camera_model.pptx",
-    "3. Resources/Computer Science/Computer Vision",
-    "3. Resources/Computer Science/Session 06 - Regular Expressions.pdf",
+    "2. Areas/Computer Science/BIO Tagging Scheme.md",
+    "2. Areas/Computer Science/Named Entity Recognition.md",
+    "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
+    "3. Resources/Computer Science/processed/Session 15 - NER.pdf",
+    "3. Resources/Computer Science/processed/Session 14 - POS tagging.pdf",
+    "3. Resources/Computer Science/processed/Session 13 - Word Embeddings.pdf",
+    "3. Resources/Computer Science/processed/Session 12 - DeepDiveSVM.pdf",
+    "3. Resources/Computer Science/processed/Session 11 - Sentiment Analysis.pdf",
+    "2. Areas/Computer Science/BERT for NER.md",
+    "2. Areas/Computer Science/CRF for Sequence Labelling.md",
+    "2. Areas/Computer Science/BIOES Tagging Scheme.md",
+    "2. Areas/Computer Science/Universal POS Tags.md",
+    "2. Areas/Computer Science/Penn Treebank POS Tagset.md",
+    "2. Areas/Computer Science/Neural POS Tagger.md",
+    "2. Areas/Computer Science/Viterbi Algorithm.md",
+    "2. Areas/Computer Science/HMM-Based POS Tagger.md",
+    "2. Areas/Computer Science/Intrinsic vs Extrinsic Evaluation of Embeddings.md",
+    "2. Areas/Computer Science/fastText.md",
+    "2. Areas/Computer Science/GloVe.md",
+    "2. Areas/Computer Science/CBOW vs Skip-gram.md",
+    "2. Areas/Computer Science/Word2Vec.md",
+    "2. Areas/Computer Science/Kernel Functions.md",
+    "2. Areas/Computer Science/Slack Variables.md",
+    "2. Areas/Computer Science/SVM Dual Formulation.md",
+    "2. Areas/Computer Science/Kernel Trick.md",
+    "2. Areas/Computer Science/Soft Margin SVM.md",
+    "2. Areas/Computer Science/Support Vectors.md",
+    "2. Areas/Computer Science/Maximum Margin Classifier.md",
+    "2. Areas/Computer Science/Aspect-Based Sentiment Analysis.md",
+    "2. Areas/Computer Science/VADER.md",
+    "2. Areas/Computer Science/Sentiment Lexicons.md",
+    "3. Resources/Computer Science/unprocessed/Session 15 - NER.pdf",
+    "3. Resources/Computer Science/unprocessed/Session 14 - POS tagging.pdf",
+    "3. Resources/Computer Science/unprocessed/Session 13 - Word Embeddings.pdf",
+    "3. Resources/Computer Science/unprocessed/Session 12 - DeepDiveSVM.pdf",
+    "3. Resources/Computer Science/unprocessed/Session 11 - Sentiment Analysis.pdf",
     "6. Images/Pasted image 20260128122027.png",
     "6. Images/Pasted image 20260128130127.png",
     "6. Images/SCR-20260128-kwns.png",
