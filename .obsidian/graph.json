@@ -5,18 +5,54 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"1. Projects\"",
+      "color": {
+        "a": 1,
+        "rgb": 10021989
+      }
+    },
+    {
+      "query": "tag:#hub",
+      "color": {
+        "a": 1,
+        "rgb": 16763955
+      }
+    },
+    {
+      "query": "tag:#nlp",
+      "color": {
+        "a": 1,
+        "rgb": 11176191
+      }
+    },
+    {
+      "query": "tag:#rl",
+      "color": {
+        "a": 1,
+        "rgb": 16733525
+      }
+    },
+    {
+      "query": "tag:#slp",
+      "color": {
+        "a": 1,
+        "rgb": 5413856
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 0.90570068359375,
-  "lineSizeMultiplier": 1.19654513888889,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 14.951171875,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.23584181592182096,
+  "centerStrength": 0.674826388888889,
+  "repelStrength": 15.2717013888889,
+  "linkStrength": 0.903949652777778,
+  "linkDistance": 200,
+  "scale": 0.20891054902225245,
   "close": true
 }
