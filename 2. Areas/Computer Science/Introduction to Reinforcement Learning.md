@@ -3,10 +3,10 @@
 
 ## Overview
 
-Reinforcement Learning is the computational study of goal-directed learning from interaction. Unlike supervised learning (instructive feedback) or unsupervised learning, RL agents receive evaluative feedback — a scalar reward that indicates how good an action was, without telling the agent what the correct action should have been. This session establishes the agent-environment loop as the central abstraction and introduces the four key elements of RL systems.
+Reinforcement Learning is the computational study of goal-directed learning from interaction. Unlike supervised learning (instructive feedback) or unsupervised learning, RL agents receive evaluative feedback — a scalar reward that indicates how good an action was, without telling the agent what the correct action should have been. This page establishes the agent-environment loop as the central abstraction and introduces the four key elements of RL systems.
 
 > [!abstract]- TL;DR
-> RL differs from other ML paradigms because its feedback is evaluative (how good?) rather than instructive (what's correct?). The core loop is: agent observes state → selects action → environment transitions → agent receives reward and next state.
+> RL differs from other ML paradigms because its feedback is evaluative (how good?) rather than instructive (what's correct?). The core loop is: agent observes state -> selects action -> environment transitions -> agent receives reward and next state.
 
 ## Knowledge Map
 

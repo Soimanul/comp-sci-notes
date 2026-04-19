@@ -42,3 +42,7 @@ The sequence $V_0, V_1, V_2, \ldots$ converges to $v_\pi$ for any initial $V_0$ 
 ## Significance
 
 Policy evaluation is the "E step" in the GPI cycle. It is also the basis for Monte Carlo and TD prediction methods, which estimate $v_\pi$ without requiring the model $p$.
+
+## From Monte Carlo Methods
+
+Monte Carlo prediction is the model-free alternative to iterative DP policy evaluation. Rather than computing $v_\pi(s)$ via Bellman backups, MC simply averages the actual returns $G_t$ observed after visiting $s$ under policy $\pi$. No transition model is required. The tradeoff: MC must wait for complete episodes before updating, whereas DP can update after a single step using the model. Both first-visit and every-visit MC converge to $v_\pi(s)$. See [[Monte Carlo Prediction]] and [[First-Visit vs Every-Visit MC]].

@@ -3,7 +3,7 @@
 
 ## Definition
 
-A computational framework for learning goal-directed behaviour through interaction. An agent observes the state of an environment, selects actions, and receives scalar reward signals — learning to maximise cumulative reward without being told what the correct action is.
+A computational framework for learning goal-directed behaviour through interaction. An agent observes the state of an environment, selects actions, and receives scalar reward signals — learning to maximise cumulative reward without being told what the correct action is. Trial and error are the two most important distinguishing features in RL. 
 
 > [!info] Key Intuition
 > RL is the only ML paradigm where the learner must discover good actions by trying them, not by being shown correct examples.
@@ -19,11 +19,11 @@ The trajectory is $S_0, A_0, R_1, S_1, A_1, R_2, \ldots$
 
 ## What Distinguishes RL from Other ML
 
-| | Supervised | Unsupervised | Reinforcement |
-|---|---|---|---|
-| Feedback | Instructive (correct label) | None | Evaluative (scalar reward) |
-| Training signal | Per-example | — | Delayed, sparse |
-| Learns | Input→Output mapping | Structure | Behaviour policy |
+|                 | Supervised                  | Unsupervised | Reinforcement              |
+| --------------- | --------------------------- | ------------ | -------------------------- |
+| Feedback        | Instructive (correct label) | None         | Evaluative (scalar reward) |
+| Training signal | Per-example                 | —            | Delayed, sparse            |
+| Learns          | Input→Output mapping        | Structure    | Behaviour policy           |
 
 **Evaluative feedback**: tells how good the action taken was — not which action would have been best. This is what creates the [[Exploration-Exploitation Tradeoff]].
 

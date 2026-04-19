@@ -34,3 +34,7 @@ The optimal policy selects $\pi_*(s) = \arg\max_a q_*(s,a)$.
 ## Significance
 
 Q-functions are the central object in model-free value-based RL (SARSA, Q-learning, DQN). The action-value formulation eliminates the need for an explicit model during policy improvement.
+
+## From Monte Carlo Methods
+
+In the model-free setting, $q_\pi(s,a)$ is strictly more useful than $v_\pi(s)$. With only state values, a model is needed to determine which action leads to the best next state. With action values, the greedy policy is constructible directly: $\pi(s) = \arg\max_a Q(s,a)$. Monte Carlo control therefore focuses on estimating $q_\pi$ rather than $v_\pi$, using first-visit or every-visit MC applied to state-action pairs instead of states. See [[Monte Carlo Control]].

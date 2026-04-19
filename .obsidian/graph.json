@@ -8,13 +8,6 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"1. Projects\"",
-      "color": {
-        "a": 1,
-        "rgb": 10021989
-      }
-    },
-    {
       "query": "tag:#hub",
       "color": {
         "a": 1,
@@ -41,6 +34,20 @@
         "a": 1,
         "rgb": 5413856
       }
+    },
+    {
+      "query": "path:\"1. Projects\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 8378722
+      }
+    },
+    {
+      "query": "tag:#computer-vision  ",
+      "color": {
+        "a": 1,
+        "rgb": 9494982
+      }
     }
   ],
   "collapse-display": false,
@@ -49,10 +56,10 @@
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.674826388888889,
-  "repelStrength": 15.2717013888889,
-  "linkStrength": 0.903949652777778,
+  "centerStrength": 0.507118055555556,
+  "repelStrength": 13.9331597222222,
+  "linkStrength": 0.829644097222222,
   "linkDistance": 200,
-  "scale": 0.20891054902225245,
-  "close": true
+  "scale": 0.17020267771309538,
+  "close": false
 }

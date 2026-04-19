@@ -37,3 +37,7 @@ These goals conflict (improvement changes $\pi$, invalidating $V$), but the inte
 ## Significance
 
 GPI is the most important organising concept in RL theory. It shows that policy evaluation and improvement are sufficient (and necessary) to reach optimality, regardless of how they are interleaved.
+
+## From Monte Carlo Methods
+
+Monte Carlo control follows the GPI schema but replaces the model-dependent Bellman backup with averaging sampled returns. Policy evaluation estimates $q_\pi$ from episodes; policy improvement is greedy w.r.t. the estimated $Q$ table. The key difference from DP GPI: evaluation and improvement are interleaved episode-by-episode rather than sweep-by-sweep, and no transition model $p(s',r|s,a)$ is needed. See [[Monte Carlo Control]].
