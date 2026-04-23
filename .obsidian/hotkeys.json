@@ -28,5 +28,14 @@
       ],
       "key": "]"
     }
+  ],
+  "omnisearch:show-modal": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "O"
+    }
   ]
 }

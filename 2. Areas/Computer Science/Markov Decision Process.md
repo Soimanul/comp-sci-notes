@@ -1,4 +1,4 @@
-**Tags:** #concept #rl
+,**Tags:** #concept #rl
 **Related:** [[Markov Chain]], [[Graphs, Search, and MDPs]], [[Bellman Equation]], [[RL Policy]]
 
 ## Definition

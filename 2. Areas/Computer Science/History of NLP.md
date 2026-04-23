@@ -1,5 +1,5 @@
 **Tags:** #topic #nlp #history 
-**Related:** [[ELIZA]], [[The ELIZA Effect]], [[Symbolic NLP]]
+**Related:** [[ELIZA]], [[The ELIZA Effect]], [[Symbolic view of language]]
 
 ## The Dawn of Computational Linguistics
 Early Natural Language Processing (NLP) focused on **Symbolic Systems**. Researchers attempted to explicitly program the rules of language and the world into computers.

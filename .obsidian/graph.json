@@ -8,45 +8,45 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#hub",
+      "query": "tag:#nlp  ",
       "color": {
         "a": 1,
-        "rgb": 16763955
+        "rgb": 9130720
       }
     },
     {
-      "query": "tag:#nlp",
+      "query": "tag:#hub  ",
       "color": {
         "a": 1,
-        "rgb": 11176191
-      }
-    },
-    {
-      "query": "tag:#rl",
-      "color": {
-        "a": 1,
-        "rgb": 16733525
-      }
-    },
-    {
-      "query": "tag:#slp",
-      "color": {
-        "a": 1,
-        "rgb": 5413856
-      }
-    },
-    {
-      "query": "path:\"1. Projects\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 8378722
+        "rgb": 16243275
       }
     },
     {
       "query": "tag:#computer-vision  ",
       "color": {
         "a": 1,
-        "rgb": 9494982
+        "rgb": 5422560
+      }
+    },
+    {
+      "query": "tag:#rl  ",
+      "color": {
+        "a": 1,
+        "rgb": 15225940
+      }
+    },
+    {
+      "query": "path:\"1. Projects\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 8708178
+      }
+    },
+    {
+      "query": "tag:#data-structure  ",
+      "color": {
+        "a": 1,
+        "rgb": 5397472
       }
     }
   ],
@@ -56,10 +56,10 @@
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.507118055555556,
-  "repelStrength": 13.9331597222222,
-  "linkStrength": 0.829644097222222,
-  "linkDistance": 200,
-  "scale": 0.17020267771309538,
+  "centerStrength": 0.400477430555556,
+  "repelStrength": 14.6545138888889,
+  "linkStrength": 0.642838541666667,
+  "linkDistance": 344,
+  "scale": 0.2251367780118704,
   "close": false
 }

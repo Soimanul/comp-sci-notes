@@ -1,4 +1,4 @@
-**Tags:** #concept #rl
+[**Tags:** #concept #rl
 **Related:** [[Actor-Critic]], [[Actor-Critic Methods]], [[Advantage Actor-Critic (A2C)]], [[Advantage Function]], [[Generalized Advantage Estimation]]
 
 ## Definition
