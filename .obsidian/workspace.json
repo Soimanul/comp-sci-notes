@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6953f34d555b7f6b",
+        "id": "d3c909fb14d5f624",
         "type": "tabs",
         "children": [
           {
-            "id": "b0597426b88dbb59",
+            "id": "57413133ba60722b",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".gitignore",
-                "bFile": ".gitignore",
-                "aRef": ""
+                "file": "1. Projects/Y3S2 - Chatbots and Recommendation Engines/Chatbots and Recommendation Engines.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: .gitignore  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Chatbots and Recommendation Engines"
             }
           }
         ]
@@ -156,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "1. Projects/Y3S2 - Chatbots and Recommendation Engines/S9 - Ranking and Learning to Rank.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of S9 - Ranking and Learning to Rank"
             }
           },
           {
@@ -195,44 +196,44 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "b0597426b88dbb59",
+  "active": "57413133ba60722b",
   "lastOpenFiles": [
+    "1. Projects/Y3S2 - Chatbots and Recommendation Engines/S1 - Introduction to Recommendation Systems.md",
     "1. Projects/Y3S2 - Chatbots and Recommendation Engines/Chatbots and Recommendation Engines.md",
-    "7. Extras/CV.md",
+    "2. Areas/Computer Science/Ranking and Learning to Rank.md",
+    "2. Areas/Computer Science/Tree-Based Methods.md",
+    "2. Areas/Computer Science/Factorization Machines Session.md",
+    "2. Areas/Computer Science/SAR and Matrix Factorization.md",
+    "2. Areas/Computer Science/Modern LLM Systems.md",
+    "2. Areas/Computer Science/Evaluation Metrics and Architectures.md",
+    "2. Areas/Computer Science/Collaborative and Content-Based Filtering.md",
+    "2. Areas/Computer Science/Data in Recommender Systems.md",
+    "2. Areas/Computer Science/Advanced LLM Techniques.md",
+    "2. Areas/Computer Science/RLHF and Memory in LLMs.md",
+    "2. Areas/Computer Science/Transfer Learning and BERT.md",
+    "2. Areas/Computer Science/Transformers and NLP Foundations.md",
+    "2. Areas/Computer Science/Graph Neural Networks for Recommendation.md",
+    "2. Areas/Computer Science/Sequential and Session-Based Recommendation.md",
+    "2. Areas/Computer Science/Wide and Deep Model Session.md",
+    "2. Areas/Computer Science/Neural Collaborative Filtering Session.md",
+    "2. Areas/Computer Science/Introduction to Recommendation Systems.md",
+    "1. Projects/Y3S2 - Chatbots and Recommendation Engines/S5 - Modern LLM Systems.md",
+    "2. Areas/Computer Science/test_write_areas.tmp",
+    "test_write.tmp",
+    "2. Areas/Computer Science/Chatbots and Modern LLM APIs.md",
+    "1. Projects/Y3S2 - Chatbots and Recommendation Engines/S7 - Factorization Machines.md",
+    "1. Projects/Y3S2 - Chatbots and Recommendation Engines/S16 - Advanced LLM Techniques.md",
+    "1. Projects/Y3S2 - Chatbots and Recommendation Engines/S2 - Data in Recommender Systems.md",
+    "1. Projects/Y3S2 - Chatbots and Recommendation Engines/S10a - Neural Collaborative Filtering.md",
+    "1. Projects/Y3S2 - Chatbots and Recommendation Engines/S14b - RLHF and Memory in LLMs.md",
+    "A",
     "3. Resources/Computer Science/processed/RLI_17 ACTOR-CRITIC (Assignment ASSIGNMENT)_20260304_CORE.pdf",
     "7. Extras",
     "3. Resources/Computer Science/processed/RLI_12 EVOLUTIONARY COMPUTATION_20260212_CORE.pdf",
     "3. Resources/Computer Science/processed/RLI_05 GRAPHS, SEARCH, MDP's_20260121_CORE.pdf",
-    "1. Projects/Y3S2 - Reinforcement Learning/Reinforcement Learning.md",
-    "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
-    "2. Areas/Computer Science/Named Entity Recognition.md",
-    "2. Areas/Computer Science/Deadly Triad.md",
-    "2. Areas/Computer Science/Experience Replay.md",
-    "2. Areas/Computer Science/Asynchronous Advantage Actor-Critic (A3C).md",
-    "2. Areas/Computer Science/Advantage Actor-Critic (A2C).md",
-    "2. Areas/Computer Science/Advantage Function.md",
-    "2. Areas/Computer Science/Actor-Critic Methods.md",
-    "2. Areas/Computer Science/Policy Gradients.md",
-    "2. Areas/Computer Science/Curriculum Learning.md",
-    "2. Areas/Computer Science/Dyna-Q.md",
-    "2. Areas/Computer Science/Double Q-Learning.md",
-    "2. Areas/Computer Science/Expected SARSA.md",
-    "2. Areas/Computer Science/SARSA.md",
-    "2. Areas/Computer Science/Temporal Difference Learning.md",
-    "2. Areas/Computer Science/Q-Learning.md",
-    "2. Areas/Computer Science/Dynamic Programming for RL.md",
-    "2. Areas/Computer Science/Variance Reduction in Policy Gradients.md",
-    "2. Areas/Computer Science/Monte Carlo Prediction.md",
-    "2. Areas/Computer Science/Monte Carlo Methods.md",
-    "2. Areas/Computer Science/TD(λ).md",
-    "2. Areas/Computer Science/Bellman Optimality Equation.md",
-    "2. Areas/Computer Science/Multi-Armed Bandits.md",
     "3. Resources/Computer Science/processed/RLI_27 TOP CASES & COMPANIES_NEW_20260416_CORE.pdf",
     "3. Resources/Computer Science/processed/RLI_26 MULTI-AGENT RL_NEW_20260409_CORE.pdf",
     "3. Resources/Computer Science/processed/RLI_25 RL APPLICATIONS_NEW_20260408_CORE.pdf",
-    "3. Resources/Computer Science/processed/RLI_16 POLICY GRADIENTS_20260226_CORE.pdf",
-    "3. Resources/Computer Science/processed/RLI_24 RESEARCH PAPERS, INNOVATION TRENDS (B)_NEW_20260326_CORE.pdf",
-    "3. Resources/Computer Science/processed/RLI_23 RESEARCH PAPERS, INNOVATION TRENDS (A)_NEW_20650325_CORE.pdf",
     "6. Images/Pasted image 20260128122027.png",
     "6. Images/Pasted image 20260128130127.png",
     "6. Images/SCR-20260128-kwns.png",

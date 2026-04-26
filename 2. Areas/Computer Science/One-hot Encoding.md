@@ -1,59 +1,34 @@
-**Tags:** #concept #nlp #representation #sparse-vectors  
-**Related:** [[Sparse Representations]] · [[Bag-of-Words (BoW)]] · [[Term–Document Matrix]] · [[Vector Space Model (VSM)]]
+**Tags:** #concept #reco #ml
+**Related:** [[User and Item Features]], [[Binarization]], [[Factorization Machines]]
 
 ## Definition
-**One-hot encoding** represents each token as a vector of length $|V|$ (vocabulary size) with a single 1 at the index of the token and 0 elsewhere. It is a common technique to transform categorical variables into binary ones.
 
-## Mechanism 
-Consider the sentence: 
+**One-hot encoding** is a technique to convert **categorical variables** into a binary vector representation suitable for numerical models. Each unique category becomes a separate binary feature (0 or 1).
 
-> *“I think it will rain”*, 
+For a categorical feature with $k$ possible values, one-hot encoding creates $k$ binary dimensions where exactly one is 1 and the rest are 0.
 
-then we have the following vectors:
+> [!info] Key Intuition
+> Machine learning models operate on numbers. One-hot encoding gives a unique, orthogonal representation to each category — no artificial ordinal relationship is implied (unlike converting "red/blue/green" to 1/2/3 which would wrongly suggest green > blue > red).
 
-I: `[1,0,0,0,0]`, think: `0,1,0,0,0`, it: `0,0,1,0,0`, will: `0,0,0,1,0`, rain: `[0,0,0,0,1]`.
+## Example
 
-Therefore, the sentence becomes a 5x5 matrix: 
+| Category | Red | Blue | Green |
+|---|---|---|---|
+| Red | 1 | 0 | 0 |
+| Blue | 0 | 1 | 0 |
+| Green | 0 | 0 | 1 |
 
-`[[1,0,0,0,0], [0,1,0,0,0], [0,0,1,0,0], [0,0,0,1,0], [0,0,0,0,1]]`
+## Trade-offs in Recommendation Systems
 
-In general, it will be a 𝑝𝑥𝑞 matrix with 𝑝 being the number of words and 𝑞 being the size of the dictionary.
+| Pro | Con |
+|---|---|
+| Handles any categorical feature | Makes data more **sparse** (adds many zero-filled columns) |
+| No ordinal assumption imposed | High cardinality features (e.g., UserID, ItemID) create enormous vectors |
+| Compatible with linear models | Memory-intensive at scale |
 
-## What it represents
-A one-hot vector is a **categorical identity representation**:
-  - it encodes *which word it is*, but encodes no similarity between words.
+> [!warning] Common Misconception
+> One-hot encoding is fine for low-cardinality features (genres: 20 values) but problematic for high-cardinality features (UserID: millions of values). For high-cardinality cases, **embedding layers** (as used in [[Factorization Machines]] and [[Neural Collaborative Filtering]]) are preferred.
 
-## Properties
-- **High-dimensional and sparse**: exactly one non-zero entry.
-- **Orthogonal basis**: different tokens have dot product 0.
-- **No semantic structure**: all distinct tokens are equally dissimilar in this representation.   
-   
-- **Advantages:** 
-	- Clean, independent “one-token = one-dimension” encoding.
-	- Simple geometry that works well with many linear/probabilistic models (often convex optimization, interpretable weights).
-	- Keeps words as discrete symbols.
-       
-- **Disadvantages:** 
-	- Scales poorly to large vocabularies (very high-dimensional, sparse, memory/compute heavy).
-	- Encodes no similarity/semantics (all different words equally dissimilar).
-	- Provides little inductive structure, so models must learn relationships/importance from scratch.
-	  
-> [!info]
-> Given this we may think that this encoding has disappeared from modern NLP, but that would not be true… it has actually been hidden.
- >
- >Word embeddings, neural networks, and transformers all start from discrete tokens that are initially treated as orthogonal symbols.
->
-  The embedding layer is, in effect, a learned transformation of a one hot vector into a dense space.
+## Significance
 
-## Why it still matters
-It is the conceptual base of sparse NLP representations and helps explain:
-  - how Bag-of-Words arises from aggregating token identities,
-  - why TF–IDF is a reweighing of the same feature space,
-  - why dense embeddings can be viewed as a learned transformation from token identities into a lower-dimensional space.
-
-## Limitations
-- Vocabulary growth increases dimensionality linearly.
-- Captures neither synonymy (different words, similar meaning) nor polysemy (same word, multiple senses).
-- Inefficient for similarity search without additional structure (weighting, factorization, or learned embeddings).
-
-
+One-hot encoding is ubiquitous in recommendation feature engineering, particularly for item metadata (genres, categories) and sparse user features. It is a prerequisite for feeding categorical data into models like Factorization Machines.
