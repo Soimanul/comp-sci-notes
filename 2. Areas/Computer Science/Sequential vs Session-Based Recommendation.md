@@ -1,4 +1,4 @@
-**Tags:** #concept #reco
+“**Tags:** #concept #reco
 **Related:** [[GRU for Recommendations]], [[LSTM for Recommendations]], [[Transformer for Sequential Recommendations]], [[CNN for Sequential Recommendations]]
 
 ## Definition

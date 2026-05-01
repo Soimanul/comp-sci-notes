@@ -99,4 +99,62 @@
 - [[CRF for Sequence Labelling]]
 - [[BERT for NER]]
 
+---
+## Module 4: Neural Models for NLP
+
+### Session 16: [[Neural Networks for NLP]]
+- [[Single Neuron Computation]]
+- [[Layer Vector Computation]]
+- [[Feedforward Neural Network]]
+- [[Activation Functions]]
+- [[Backpropagation]]
+- [[Epoch]]
+- [[Stochastic Gradient Descent (SGD)]]
+- [[Neural Network Loss Functions]]
+- [[Neural Network Optimizers]]
+- [[Embedding Matrix]]
+- [[Sentence Average Embedding]]
+
+### Session 17: [[Recurrent Neural Networks]]
+- [[Sequence Language Modelling]]
+- [[Elman RNN]]
+- [[Hidden State (RNN)]]
+- [[Backpropagation Through Time]]
+- [[Vanishing and Exploding Gradients]]
+- [[RNN Task Configurations]]
+- [[Text Generation with RNNs]]
+- [[Long-Range Dependencies in RNNs]]
+
+### Session 18: [[Beyond Vanilla RNNs]]
+- [[Gating Mechanism]]
+- [[LSTM]]
+- [[GRU]]
+- [[Encoder Decoder Architecture]]
+- [[Information Bottleneck (Encoder-Decoder)]]
+- [[Attention Mechanism]]
+
+### Session 19: [[Attention to Transformer]]
+- [[Bahdanau Attention]]
+- [[Keys Queries Values]]
+- [[Teacher Forcing]]
+- [[Self-Attention]]
+- [[Cross-Attention]]
+- [[Masked Self-Attention]]
+- [[Transformer Architecture]]
+- [[Multi-Head Self-Attention]]
+- [[Positional Encoding]]
+- [[Residual Connections]]
+- [[Layer Normalization]]
+- [[Transformer Family]]
+
+---
+## Module 5: Challenges and Future Trends
+
+### Session 24: [[NLP Challenges and Future Trends]]
+- [[Tasks as Generation]]
+- [[RAG Pipeline]]
+- [[Context Window Limitations]]
+- [[Large Context Models]]
+- [[Agentic Workflows]]
+
 [[PRESENTATION_SCRIPT]]
