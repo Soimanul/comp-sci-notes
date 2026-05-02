@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d3c909fb14d5f624",
+        "id": "e834df19add1adea",
         "type": "tabs",
         "children": [
           {
-            "id": "57413133ba60722b",
+            "id": "6452d139e7a2d6da",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Natural Language Processing"
+              "title": "New tab"
             }
           }
         ]
@@ -78,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 356.5,
-    "collapsed": true
+    "width": 356.5
   },
   "right": {
     "id": "5526dbe9e1211c42",
@@ -197,8 +192,9 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "57413133ba60722b",
+  "active": "6452d139e7a2d6da",
   "lastOpenFiles": [
+    "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
     "2. Areas/Computer Science/k-Nearest Neighbors.md",
     "2. Areas/Computer Science/SLP - Introduction & kNN.md",
     "2. Areas/Computer Science/Supervised Learning.md",
@@ -229,7 +225,6 @@
     "2. Areas/Computer Science/Gating Mechanism.md",
     "2. Areas/Computer Science/Beyond Vanilla RNNs.md",
     "3. Resources/Computer Science/Processed/Session 17 - Recurrent NN.txt",
-    "2. Areas/Computer Science/Long-Range Dependencies in RNNs.md",
     "3. Resources/Computer Science/Processed/Session 16 - Neural Networks.txt",
     "3. Resources/Computer Science/Processed/Session 15 - NER.pdf",
     "3. Resources/Computer Science/Processed/Session 14 - POS tagging.pdf",
