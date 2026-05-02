@@ -11,10 +11,14 @@
             "id": "6452d139e7a2d6da",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Natural Language Processing"
             }
           }
         ]
@@ -74,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 356.5
+    "width": 356.5,
+    "collapsed": true
   },
   "right": {
     "id": "5526dbe9e1211c42",
@@ -152,17 +157,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1. Projects/Y3S2 - Chatbots and Recommendation Engines/S9 - Ranking and Learning to Rank.md",
+                "file": "1. Projects/Y3S2 - Natural Language Processing/Natural Language Processing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of S9 - Ranking and Learning to Rank"
+              "title": "Outline of Natural Language Processing"
             }
           },
           {
-            "id": "9f80f53609440980",
+            "id": "7f9f06a34f08dfe0",
             "type": "leaf",
             "state": {
               "type": "git-view",

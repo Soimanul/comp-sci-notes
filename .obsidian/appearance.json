@@ -5,7 +5,7 @@
   "textFontFamily": "Lilex",
   "interfaceFontFamily": "IBM Plex Sans",
   "theme": "system",
-  "translucency": true,
+  "translucency": false,
   "showRibbon": true,
   "enabledCssSnippets": [
     "theme-override"
