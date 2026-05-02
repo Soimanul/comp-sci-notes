@@ -150,11 +150,11 @@
 ---
 ## Module 5: Challenges and Future Trends
 
-### ~~Session 24: [[NLP Challenges and Future Trends]]~~
-- ~~[[Tasks as Generation]]~~
-- ~~[[RAG Pipeline]]~~
-- ~~[[Context Window Limitations]]~~
-- ~~[[Large Context Models]]~~
-- ~~[[Agentic Workflows]]~~
+### Session 24: [[NLP Challenges and Future Trends]]
+- [[Tasks as Generation]]
+- [[RAG Pipeline]]
+- [[Context Window Limitations]]
+- [[Large Context Models]]
+- [[Agentic Workflows]]
 
 [[PRESENTATION_SCRIPT]]
