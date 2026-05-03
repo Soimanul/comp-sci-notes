@@ -3,26 +3,38 @@
 
 ## Overview
 
-Sentiment Analysis (Opinion Mining) is the computational study of opinions, sentiments, and emotions expressed in text. It ranges from coarse-grained document-level polarity classification to fine-grained aspect-level analysis of specific entities or features.
+Sentiment Analysis (Opinion Mining) is the computational study of opinions, sentiments, emotions, and appraisals expressed in text toward an entity or one of its features. It ranges from coarse-grained document-level polarity classification to fine-grained aspect-level analysis, and extends to **sentiment trajectories** that treat tone as a temporal signal across discourse.
 
 > [!abstract]- TL;DR
-> Sentiment analysis extracts subjective information — polarity, subjectivity, or emotion — from text using lexicon-based, ML, or hybrid approaches. Aspect-based SA zooms in on opinion targets within a sentence rather than treating the document as a single opinion unit.
+> An opinion is formally a quintuple $(e, a, s, h, t)$. Most practical systems collapse it to a single polarity label $s$ and predict it with three competing perspectives — n-gram language models, Naïve Bayes, or logistic regression — or aggregate lexicon scores. Beyond static classification, sentiment can be tracked sentence-by-sentence to expose discourse and rhetorical structure.
 
 ## Knowledge Map
 
-### 1. Core Tasks
+### 1. What Sentiment Is
 - [[Opinion Mining]]
 - [[Subjectivity vs Objectivity in Text]]
+- [[Sentiment Triple]]
+- [[Opinion Quintuple]]
 
 ### 2. Lexicon-Based Approaches
 - [[Sentiment Lexicons]]
+- [[Lexicon Scoring]]
+- [[Compositional Challenges in Lexicon Scoring]]
 - [[VADER]]
 
-### 3. ML-Based Approaches
+### 3. Three Perspectives on Sentiment Classification
+- [[Three Perspectives on Sentiment Classification]]
+- [[Naïve Bayes]]
+- [[Logistic Regression]]
+
+### 4. Sentiment Beyond Documents
 - [[Aspect-Based Sentiment Analysis]]
+- [[Sentiment as Temporal Signal]]
 
 > [!question]- Common Exam Questions
-> - What is the difference between subjectivity detection and polarity classification?
-> - How does VADER handle negation and intensifiers?
-> - What are the limitations of lexicon-based sentiment analysis on domain-specific text?
-> - What makes aspect-based sentiment analysis harder than document-level SA?
+> - Write down the opinion quintuple and explain each component.
+> - What is the difference between an opinion, a sentiment, and an emotion?
+> - State the lexicon-based scoring formula and explain how negation breaks it.
+> - Compare the n-gram, Naïve Bayes, and logistic regression formulations of sentiment classification — what does each fundamentally ask?
+> - How does treating sentiment as a temporal signal change what the analysis reveals?
+> - Why is the Loughran–McDonald lexicon needed for financial text?

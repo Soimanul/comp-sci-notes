@@ -2,7 +2,7 @@
 **Related:** [[Advanced NLP Concepts]] · [[Information Retrieval]] · [[Vector Space Model (VSM)]]
 
 ## Overview
-This hub links the symbolic foundations of NLP (formal grammars and rule-based structure) to the statistical shift toward usage-based approximations, then grounds those tradeoffs in practical Python tooling. It frames NLP libraries as “assumption bundles” that encode representations, pipelines, and defaults, and it positions NLTK, spaCy, Gensim, and pretrained-model interfaces as concrete implementations of different theoretical compromises.
+This hub links the symbolic foundations of NLP (formal grammars and rule-based structure) to the statistical shift toward usage-based approximations, then ground those tradeoffs in practical Python tooling. It frames NLP libraries as “assumption bundles” that encode representations, pipelines, and defaults, and it positions NLTK, spaCy, Gensim, and pretrained-model interfaces as concrete implementations of different theoretical compromises.
 
 ## Knowledge Map
 

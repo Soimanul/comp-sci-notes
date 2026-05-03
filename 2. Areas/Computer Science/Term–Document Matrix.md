@@ -24,7 +24,7 @@ Additionally, similarity computations (cosine, etc.) and weighting schemes opera
 ## Conceptual consequences
 - The matrix is usually **sparse** (large vocabulary, most terms absent in most documents).
 - It supports distributional semantics:
-  - terms with similar distributions across documents become similar vectors,
+  - terms with similar distributions across documents become similar vectors.
   - documents with similar term distributions become similar vectors.
 
 ## What it enables next

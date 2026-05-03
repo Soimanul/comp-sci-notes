@@ -1,30 +1,40 @@
 **Tags:** #hub #nlp #embeddings
-**Related:** [[Natural Language Processing]], [[Embeddings]], [[Distributional Hypothesis]]
+**Related:** [[Natural Language Processing]], [[Vector Space Model (VSM)]], [[Distributional Hypothesis]], [[Latent Dirichlet Allocation (LDA)]]
 
 ## Overview
 
-Word embeddings are dense, low-dimensional vector representations of words learned from large corpora. Unlike sparse count-based vectors, embeddings capture semantic and syntactic regularities as geometric relationships in vector space — enabling analogy arithmetic and semantic similarity queries.
+Word embeddings replace **count-based** word representations with **dense, learned** vectors. Where Bag-of-Words, TF–IDF, LSA, and LDA all treat the word as an atomic symbol whose meaning is reconstructed indirectly from co-occurrence statistics, embeddings define meaning as a parameter learned by minimising prediction error. The geometry of the embedding space is intrinsic — similarity is encoded in vector inner products, not in shared counts.
 
 > [!abstract]- TL;DR
-> Word embeddings compress distributional statistics into dense vectors where similar words cluster together. Word2Vec, GloVe, and fastText each learn these vectors differently but all exploit the distributional hypothesis: a word is defined by the company it keeps.
+> Classical distribution collapses under sparsity, synonymy, polysemy, order loss, and compositional interactions. Word2Vec replaces it with the predictive paradigm: each word becomes a learnable vector in $\mathbb{R}^d$, trained so that similar contexts produce similar predictions. Skip-Gram with negative sampling is implicitly factorising a shifted PMI matrix — predictive and count-based methods are not unrelated, but the predictive route scales and generalises better.
 
 ## Knowledge Map
 
-### 1. Prediction-Based Models
+### 1. Why Classical Distribution Collapses
+- [[Limits of Count-Based Representations]]
+
+### 2. The Predictive Turn
 - [[Word2Vec]]
 - [[CBOW vs Skip-gram]]
+- [[Skip-Gram Objective]]
+- [[Negative Sampling]]
 
-### 2. Count-Based Models
+### 3. Connections and Interpretation
+- [[Word2Vec PMI Equivalence]]
+- [[Embedding Geometry and Analogies]]
+
+### 4. Other Embedding Families
 - [[GloVe]]
-
-### 3. Subword Models
 - [[fastText]]
 
-### 4. Evaluation
+### 5. Evaluation and Limits
 - [[Intrinsic vs Extrinsic Evaluation of Embeddings]]
+- [[Static Embedding Limits]]
 
 > [!question]- Common Exam Questions
-> - What is the difference between CBOW and Skip-gram in Word2Vec?
-> - How does GloVe combine global co-occurrence statistics with local context?
-> - Why does fastText handle OOV words better than Word2Vec?
-> - What is the analogy test and what does passing it imply about an embedding space?
+> - Name three structural failures of Bag-of-Words that motivate dense embeddings.
+> - Write the Skip-Gram softmax objective and explain why the denominator is computationally prohibitive.
+> - State the negative sampling objective. What does it approximate and how?
+> - Under what assumptions does Skip-Gram with negative sampling factorise a shifted PMI matrix?
+> - Why do static embeddings fail to handle polysemy, and how do contextual models address it?
+> - Explain the king − man + woman ≈ queen result geometrically.

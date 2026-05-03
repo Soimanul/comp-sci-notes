@@ -11,12 +11,16 @@ A sentiment lexicon is a vocabulary of words annotated with their sentiment pola
 ## Core Mechanics
 
 Common lexicons:
-| Lexicon | Coverage | Scores |
+| Lexicon | Coverage / domain | Scores |
 |---|---|---|
+| **Bing Liu's Opinion Lexicon** | ~6,800 words, general | binary pos/neg |
+| **AFINN** | ~3,300 words, general | –5 to +5 integer (graded intensity) |
+| **NRC Emotion Lexicon** | general | multi-label: anger, anticipation, disgust, fear, joy, sadness, surprise, trust + pos/neg |
+| **Loughran–McDonald** | financial reporting | binary, domain-tuned ("liability", "capital" treated as neutral) |
 | **SentiWordNet** | WordNet senses | pos/neg/obj per sense |
-| **BING Liu's Opinion Lexicon** | ~6,800 words | binary pos/neg |
-| **AFINN** | ~3,300 words | –5 to +5 integer |
-| **VADER** | social media tuned | compound score |
+| **VADER** | social media tuned | compound score with negation/intensifier handling |
+
+The choice of lexicon should align with **domain** and **interpretive goal**. A general lexicon misclassifies financial text systematically; an emotion lexicon enables emotion classification rather than mere polarity.
 
 **Scoring pipeline**:
 1. Tokenise and normalise the text
