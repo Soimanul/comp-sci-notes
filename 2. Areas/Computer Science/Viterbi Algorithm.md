@@ -23,8 +23,72 @@ $$\hat{t}_n = \arg\max_t \delta_n(t)$$
 **Backtrack** via $\psi$ to recover the full tag sequence. Work in log space to avoid underflow.
 
 > [!example]- Worked Example
-> Tagset: {NN, VB}, sentence: "fish can fly" (3 tokens, 4 states including START)
-> Build a $2 \times 3$ grid of $\delta$ values, fill left-to-right, backtrack the argmax path. Each cell takes constant time: 3 grid cells × 2 transitions = 6 operations per column.
+> 
+> Tagset: {NN, VB}, sentence: "He saw ducks" (3 tokens, 2 states). Let's trace the $\delta$ and $\psi$ variables.
+> 
+> **Assumed Probabilities:**
+> 
+> - $P(\text{NN} \mid \text{START}) = 1.0$
+>     
+> - $P(\text{VB} \mid \text{NN}) = 0.8$, $P(\text{NN} \mid \text{NN}) = 0.2$
+>     
+> - $P(\text{NN} \mid \text{VB}) = 0.8$, $P(\text{VB} \mid \text{VB}) = 0.2$
+>     
+> - $w_2$ "saw": $P(\text{saw} \mid \text{VB}) = 0.9$, $P(\text{saw} \mid \text{NN}) = 0.1$
+>     
+> - $w_3$ "ducks": $P(\text{ducks} \mid \text{NN}) = 0.8$, $P(\text{ducks} \mid \text{VB}) = 0.2$
+>     
+> 
+> **Step 1: Initialisation ($w_1 = \text{"He"}$)**
+> 
+> - $\delta_1(\text{NN}) = 1.0 \cdot 1.0 = 1.0$ _(Assuming "He" is unequivocally a Noun here)_
+>     
+> - $\delta_1(\text{VB}) = 0$
+>     
+> 
+> **Step 2: Recursion ($w_2 = \text{"saw"}$)**
+> 
+> - **To NN:** $\delta_2(\text{NN}) = \max [1.0 \cdot 0.2] \cdot 0.1 = 0.02$
+>     
+>     - $\psi_2(\text{NN}) = \text{NN}$
+>         
+> - **To VB:** $\delta_2(\text{VB}) = \max [1.0 \cdot 0.8] \cdot 0.9 = 0.72$
+>     
+>     - $\psi_2(\text{VB}) = \text{NN}$
+>         
+> 
+> **Step 3: Recursion ($w_3 = \text{"ducks"}$)**
+> 
+> - **To NN:** We check previous paths $\left(\delta_2(t') \cdot P(\text{NN} \mid t')\right)$:
+>     
+>     - From NN: $0.02 \cdot 0.2 = 0.004$
+>         
+>     - From VB: $0.72 \cdot 0.8 = 0.576 \leftarrow \textbf{Max!}$
+>         
+>     - $\delta_3(\text{NN}) = 0.576 \cdot 0.8 (\text{emission}) = 0.4608$
+>         
+>     - $\psi_3(\text{NN}) = \text{VB}$
+>         
+> - **To VB:** We check previous paths $\left(\delta_2(t') \cdot P(\text{VB} \mid t')\right)$:
+>     
+>     - From NN: $0.02 \cdot 0.8 = 0.016$
+>         
+>     - From VB: $0.72 \cdot 0.2 = 0.144 \leftarrow \textbf{Max!}$
+>         
+>     - $\delta_3(\text{VB}) = 0.144 \cdot 0.2 (\text{emission}) = 0.0288$
+>         
+>     - $\psi_3(\text{VB}) = \text{VB}$
+>         
+> 
+> **Termination & Backtrack:**
+> 
+> - $\hat{t}_3 = \arg\max(0.4608, 0.0288) = \textbf{NN}$
+>     
+> - Backtrack: $\psi_3(\text{NN}) = \textbf{VB} \rightarrow \psi_2(\text{VB}) = \textbf{NN}$
+>     
+> - Final Sequence: **NN $\rightarrow$ VB $\rightarrow$ NN**
+>     
 
 > [!warning] Common Misconception
 > Viterbi finds the single best complete sequence — it is NOT the same as greedily picking the best tag at each position independently. Greedy tagging can get locked into locally optimal but globally suboptimal choices.
+**Tags:** #concept #nlp #pos #sequence-labelling #viterbi
